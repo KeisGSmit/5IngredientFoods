@@ -3,6 +3,36 @@
 One or two paragraphs providing an overview of your project.
 
 Essentially, this part is your sales pitch.
+
+## Table of contents
+
+<!--ts-->
+
+- [UX](#UX)
+  - [High level considerations](#High-level-considerations)
+  - [Busniness goals](#Business-goals)
+  - [B2B vs B2C](#B2B-vs-B2C)
+  - [Strategy Trade-offs](#Strategy-Trade-offs)
+  - [Scope plane trade offs](#Scope-plane-trade-offs)
+  - [Scope plane requirements](#Scop-plane-requirements)
+  - [Scope Plane Requirement types](#Scope-Plane-Requirement-types)
+  - [The structure Plane concerns](#The-structure-Plane-concerns)
+  - [Interaction design](#Interaction-design)
+  - [Information architecture](#Information-architecture)
+  - [Architecture types](#Architecture-types)
+  - [principles of organisation](#Principles-of-organisation)
+  - [The Skeleton plane](#The-Skeleton-plane)
+  - [Habits & conventions](#Habits-&-conventions)
+  - [Features and usefulness](#Features-and-usefulness)
+  - [The Surface Plane](#The-surface-plane)
+- [Features](#Features)
+- [Technologies Used](#Technologies-Used)
+- [Testing](#Testing)
+- [Deployment](#Deployment)
+- [Credits](#Credits)
+<!--te-->
+
+---
  
 ## UX
  
@@ -59,6 +89,16 @@ If this section grows too long, you may want to split it off into a separate fil
 ## Deployment
 
 This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub Pages or Heroku).
+
+To deploy this project I followed the following steps:
+1. I created my env.py file where I created my variables (IP, Port, MONGo_URI, MONGO_DBNAME and a secret key for flashed massages)
+2. I used the CLI to install all my frameworks and collected them inside the requirements.txt file (See requirements.txt)
+3. I created my procfile for heroku stating that it should run app.py as a web app and it uses the python language
+4. I created my MongoDB and connected to it
+5. I went to https://dashboard.heroku.com/apps and created my new app
+6. I connected to my GitHub repository via Heroku
+7. I then went to setting and added my configuartion variables (same variables as in my env.py file)
+8. I connected to my master branch and this is the final step of deployment 
 
 In particular, you should provide all details of the differences between the deployed version and the development version, if any, including:
 - Different values for environment variables (Heroku Config Vars)?
