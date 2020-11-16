@@ -98,7 +98,7 @@ If this section grows too long, you may want to split it off into a separate fil
 
 ## Deployment
 
-This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub Pages or Heroku).
+Link to the live page: https://keis5ingredientsfoods.herokuapp.com/ 
 
 To deploy this project I followed the following steps:
 1. I created my env.py file where I created my variables (IP, Port, MONGo_URI, MONGO_DBNAME and a secret key for flashed massages)
