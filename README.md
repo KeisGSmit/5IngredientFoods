@@ -31,16 +31,11 @@ Essentially, this part is your sales pitch.
 
 Due to the assessment, business goals are negligible. 
 
-<<<<<<< HEAD
-### Strategy-Trade-offs 
-=======
 ### Strategy Trade Off 
->>>>>>> 8107b0377f8382537e13b1cf347cbe8a1841db14
 
 
 -	I am making a Web app that allows people to find and share recipes  
 -	The value we provide is to be able to quickly find recipes and share them. 
-<<<<<<< HEAD
 -	Anyone is allowed to use the website (Due to this I am reluctant to use a login system)
 -	People looking for recipes are people who do not know what to make for breakfast/dinner/lunch so we aim to provide as many recipes for these as possible. 
 -	Competitors normally share their recipes in a blog which makes it tedious because as a user, we do not care about the blogger’s life story regarding that recipe, we just want the recipe. 
@@ -124,17 +119,6 @@ of certain cooking equipment used in the different recipes and these can be
 ### Scope Plane requirements
 
 
-=======
--	Anyone is allowed to use the website
--	People looking for recipes are people we do not know what to make for breakfast/dinner/lunch so we aim to provide as many recipes for these as possible. 
--	Competitors normally share their recipes in a blog which makes it tedious because as a user, we do not care about the blogger’s life story regarding that recipe, we just want the recipe. 
--	Competitors who share their recipes on non-blog sites normally share gifs of their recipe on forums (Reddit) but without knowing that you can control the gif makes it long to find the next step because you will have to wait for the gif to replay before you can see the next step. 
--	User needs: 
-o	Easily find and share recipes 
--	Site owners goal:
-o	Promote cooking equipment (AMC Classic (?))
--	Will need to include instructions on site
->>>>>>> 8107b0377f8382537e13b1cf347cbe8a1841db14
 
 ## Features
 
