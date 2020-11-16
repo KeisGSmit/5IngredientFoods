@@ -10,8 +10,6 @@ Essentially, this part is your sales pitch.
 
 - [UX](#UX)
   - [High level considerations](#High-level-considerations)
-  - [Busniness goals](#Business-goals)
-  - [B2B vs B2C](#B2B-vs-B2C)
   - [Strategy Trade-offs](#Strategy-Trade-offs)
   - [Scope plane trade offs](#Scope-plane-trade-offs)
   - [Scope plane requirements](#Scop-plane-requirements)
@@ -35,13 +33,18 @@ Essentially, this part is your sales pitch.
 ---
  
 ## UX
- 
-Use this section to provide insight into your UX process, focusing on who this website is for, what it is that they want to achieve and how your project is the best way to help them achieve these things.
+### High level considerations
+-	Looking at the target audience: This is a very culturally appropriate project. It is a web app that focuses on sharing recipes. 
+-	Anybody can use this web app. The content will focus on recipes and food. 
+-	Can we track and catalogue the content in an intuitive way? 
+-	The content will be entered into a database and be displayed to the different pages
+-	Cook books require people to buy the books while this web app provides the recipes for free
+-	The technology we are using is very modern: HTML5, CSS3, JavaScript, Python and MongoDB
 
-In particular, as part of this section we recommend that you provide a list of User Stories, with the following general structure:
-- As a user type, I want to perform an action, so that I can achieve a goal.
+### Business goals 
 
-This section is also where you would share links to any wireframes, mockups, diagrams etc. that you created as part of the design process. These files should themselves either be included as a pdf file in the project itself (in an separate directory), or just hosted elsewhere online and can be in any format that is viewable inside the browser.
+Due to the assessment, business goals are negligible. 
+
 
 ## Features
 
@@ -67,6 +70,13 @@ In this section, you should mention all of the languages, frameworks, libraries,
 
 
 ## Testing
+
+1. Testing if Project deploys successfully to Heroku: (Sha: 937c8b93b29328c060febef617a9b8f7421e3a7d)
+    - after the [Deployment](#deployment) sequence I pushed my work to GitHub
+    - I got a jinja error
+    - I revisited my app.py file and saw I rendered the wrong template which does not exists
+    - To fix this I renamed the template the to correct corresponding template which does exists (sha: 079dc6719fb3d9ca5ac7e4859456d2a042d8becd)
+    - app now successfully launches to Heroku. 
 
 In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
 
