@@ -9,20 +9,6 @@ Essentially, this part is your sales pitch.
 <!--ts-->
 
 - [UX](#UX)
-  - [High level considerations](#High-level-considerations)
-  - [Strategy Trade-offs](#Strategy-Trade-offs)
-  - [Scope plane trade offs](#Scope-plane-trade-offs)
-  - [Scope plane requirements](#Scop-plane-requirements)
-  - [Scope Plane Requirement types](#Scope-Plane-Requirement-types)
-  - [The structure Plane concerns](#The-structure-Plane-concerns)
-  - [Interaction design](#Interaction-design)
-  - [Information architecture](#Information-architecture)
-  - [Architecture types](#Architecture-types)
-  - [principles of organisation](#Principles-of-organisation)
-  - [The Skeleton plane](#The-Skeleton-plane)
-  - [Habits & conventions](#Habits-&-conventions)
-  - [Features and usefulness](#Features-and-usefulness)
-  - [The Surface Plane](#The-surface-plane)
 - [Features](#Features)
 - [Technologies Used](#Technologies-Used)
 - [Testing](#Testing)
@@ -44,6 +30,94 @@ Essentially, this part is your sales pitch.
 ### Business goals 
 
 Due to the assessment, business goals are negligible. 
+
+### Strategy-Trade-offs 
+
+
+-	I am making a Web app that allows people to find and share recipes  
+-	The value we provide is to be able to quickly find recipes and share them. 
+-	Anyone is allowed to use the website (Due to this I am reluctant to use a login system)
+-	People looking for recipes are people who do not know what to make for breakfast/dinner/lunch so we aim to provide as many recipes for these as possible. 
+-	Competitors normally share their recipes in a blog which makes it tedious because as a user, we do not care about the blogger’s life story regarding that recipe, we just want the recipe. 
+-	Competitors who share their recipes on non-blog sites normally share gifs of their recipe on forums (Reddit) but without knowing that you can control the gif makes it long to find the next step because you will have to wait for the gif to replay before you can see the next step. 
+-	User needs: 
+    - Easily find and share recipes 
+-	Site owners goal:
+    - Promote cooking equipment (AMC Classic (?)) [maybe]
+-	Will need to include instructions on site for single use learning
+
+- "First Use" Questions need to be answered so that the  user knows what to expect and what to do next.
+
+![The Features disgram](Readme_sourceFiles/tradeOff.png)
+
+
+#### The trade Off
+
+- I have rated each feature from 1 - 5 (where 1 is the least and 5 is the most) on importance and viability
+
+- First I add up the total on importance, which is 33
+
+- Then I find my average viability, which is 4.25. Then I multiply that by the 
+number of items, which is 34. 
+
+- My importance "value" is 33 and my viability is 34. Thus viability > importance
+    - this means that all features can be implemented
+
+- Depending on the time constraints the items with the lowest importance will be incorporated last
+
+### Scope Plane trade off
+
+- The features that are open for discusion at the moment (16/11/2020) [DD/MM/YYYY] is the Promotion of Products and the comment section on each recipe becuase they have the lowest 
+viability of all the features
+
+- the project should be done within 3 weeks 
+    - I have 21 days to implement 8 features
+    - This means one feature should be implemented every +-3 days  
+
+#### comment section on each recipe
+- I believe using advanced routing features in python (hypothetically) I can redirect
+a user to a individual page to a dedicated recipe as follows: 
+
+```       
+    @app.route("/recipes/<recipe_url>") 
+    def about_recipe(recipe_url):
+    # I am creating an empty dictionary
+        recipe = []
+        # I am expecting this to return a collection of food names
+        with mongo.db.food.find_all("food_name") as food_data:
+            # I am allocating the collection of food names into a variable 
+            data = food_data
+            for obj in data:
+                # each recipe put into the database will have a url which
+                # will be the name of the food but on submission the correct .methods
+                # will be used for exmaple:  .replace(" ", "_") and .lower()
+                if obj['url'] == recipe_url
+                    recipe = obj
+        return render_template("recipe.html", recipe=food)
+```
+- then on the `recipe.html` which is being rendered there will be a input box where, on submission
+will display directly to the page using jinja syntax. 
+
+- an issue with this is:
+    - if there is no login system (as stated above) all comments will just appear as paragraphs and will not
+    satify the first time learning and lead to a bad UX. 
+    - if there is a login system then further research will have to be done to be
+     able to incorporate a voting system to rate the most helpful comments and
+      to permanently show each comment to the correct url. 
+        - this leads to another issue: how do I prevent a user voting more than once?
+    - This means another database needs to be established.
+
+- I believe the comment section should not be included. This is to be disccused in the future in greater detail
+
+#### Promotion of products
+
+- This seems more viable than the comment section 
+- A local Json file can be established with images, names and links 
+of certain cooking equipment used in the different recipes and these can be
+ used to promote products. (linkin user to the Official product site)
+
+### Scope Plane requirements
+
 
 
 ## Features
