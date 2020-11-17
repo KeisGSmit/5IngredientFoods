@@ -105,6 +105,7 @@ will display directly to the page using jinja syntax.
      able to incorporate a voting system to rate the most helpful comments and
       to permanently show each comment to the correct url. 
         - this leads to another issue: how do I prevent a user voting more than once?
+        - another issue is that many users using the app are just visitors and will not ant to sign up to this system
     - This means another database needs to be established.
 
 - I believe the comment section should not be included. This is to be disccused in the future in greater detail
@@ -117,8 +118,65 @@ of certain cooking equipment used in the different recipes and these can be
  used to promote products. (linkin user to the Official product site)
 
 ### Scope Plane requirements
+- I conducted an interview with my family regarding this section asking them 3 main questions
+    - what the users say they need
+        -  One User wanted a conversion Table
+            - this can be incorporated under each recipe's individual page 
+        - One user wants media - photos/gifs of the recipe
+            - this can also be incorporated in each recipe's individual page
+            - more than 1 images will have to be in a gallary
+        - Users said they wanted a difficulty level for each recipe
+        - One user said they wanted cooking tips at the side but this is so niche to each recipe
+            - what I can do is include a "tips" section in the submission form and this will be displayed as cards on the recipe's page
+                - this will make the data size of each netry a bit larger
+                - There can be a limit of 3 tips to make sure the most important tips are given
+        - Another user wanted the recipes to already be on the app but this defeats the purpose of the goal: to be able to share recipes
+        - Users want to know if the recipe was tested by different users
+            - This brings up the problem of the login system which will not be incorporated
+        - Users wanted categories for each recipe
+            - main course, sides, desserts etc...
+            - There has to be a limit of categories
+                - that means once the category is created, it stays there. No admin control would exist
+        - Users wanted cooking "teachings" to teach people using the app how to cooking
+            - but this misses the site's goal and can be considered negligable 
+        - Users wanted a filtering system to be able to filter their searches by difficulty
+            - this can be done by creating an index in mongoDB 
+    - what they actually need 
+        - Users were unaware of the requirements:
+            - to have a responsive design 
+            - to have a navigation system
+        - users wanted to share the recipes via pictures but this going to lead to recipes being misread and/or misunderstood
+    - what they do not know they need
+        - The submission form here is crucial since this is the only logical way to get the recipe online in a clear and comprehensive manner.
+        - Users were unaware of the importance of the colour scheme
+
+### Scope Plane requirement types
+
+- Looking at the content requirements there will be a lot of mixed content of the multiple pages
+    - Images/ gifs, Cards, Ordered and Unordered lists with a lot of text
 
 
+- considering the viability of the scope plane requirements I would say that the requirements 
+we can include (outside of the initial features) are:
+    - The conversion Table
+    - media/ gifs of the recipe
+    - The categories for when the meal is applicable (dinner/lunch/breakfast etc). these will be stored in a database and they will be part of a drop down list in the submission form
+    - The filtering system
+- the requirements can't include due to viability is:
+    - The difficulty level
+        - I support this idea but difficulty is relevant: Gordon Ramsey might find roast beef simple but a 15 year old could find it challenging/dangerous
+    - The cooking tips
+        - I can attempt to include this but if it makes the database full then it will probably not be included
+
+
+- The requirements listed are not features but they are "nice to haves"
+- Incorporating them could round off this project quite nicely and make the projects seem more useful, buildable, objective annd functional
+
+- A non-functional requirement I am seeing is scalability 
+    - I will have to move to a better, larger server if the traffic gets too being
+    - this means setting up new environment variables which can be done but will definetvly cost money
+
+### Structure Plane concerns
 
 ## Features
 
