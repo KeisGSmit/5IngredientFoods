@@ -48,7 +48,7 @@ Due to the assessment, business goals are negligible.
 
 - "First Use" Questions need to be answered so that the  user knows what to expect and what to do next.
 
-![The Features disgram](Readme_sourceFiles/tradeOff.png)
+![The Features diagram](Readme_sourceFiles/tradeOff.png)
 
 
 #### The trade Off
@@ -178,6 +178,27 @@ we can include (outside of the initial features) are:
 
 ### Structure Plane concerns
 
+- The following diagram displays how I plan to organize the functionality & content 
+of the site and how a user might navigate through the site intuitivly 
+
+![Structure plane](Readme_sourceFiles/Structure_plane.png)
+
+- The user will start at the landing page 
+- At the top will be a nav bar with 5 sections: Share, Find, About, Contact and Home
+    - Share will be a submission form
+    - Find will be a gallary/catalogue with a filter that uses advanced routing
+     to direct a user to an individual recipe
+    - About will give a bit more information on the project's background
+    - Contact will be a form that emails me complaints using an API 
+    - Home will take a user to the landing page
+
+- The plan is to have a linear hyperlinked structure that is simple enough
+ for users to navigate through but complex enough to include a lot of information
+
+
+### Interaction design 
+
+- 
 ## Features
 
 In this section, you should go over the different parts of your project, and describe each in a sentence or so.
