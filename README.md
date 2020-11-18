@@ -235,6 +235,27 @@ This is my attempt at trying to draw an ERS diagram of the databases
 - The Site will try to Leverage from Prior experience by assuming the user has an expectation of convention
     - Like having the Nav Bar at the top of the page
 
+- The Theme of the page will be consistant and will use the following pallete:
+![Colour pallet for the site](Readme_sourceFiles/pallet.png)
+
+- By using a Library like bootstrap or materialize (will see which will be more beneficial once in the building phase) the voice of the site will remain consistant and stable
+
+- Due to the simplicity of the structure of the site, the app/site should be very learnable
+
+### information Architecture
+
+- This section is responsible for the creation of organisation and navigational schemes which has already been discussed in the structure plane concerns and 
+the interaction design. 
+
+- the architecture, I believe, is done correctly so that when changes are made the architecture can accomodate those changes
+
+- The architecture forms a Tree Structure which is relatively standard
+    - This is known to be problematic on Mobile but with the ease of a burger icon, I plan to reduce those problems
+
+### Principals of organisation
+
+- The way data will be organised 
+
 ## Features
 
 In this section, you should go over the different parts of your project, and describe each in a sentence or so.
