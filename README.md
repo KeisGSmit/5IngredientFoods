@@ -271,6 +271,7 @@ the interaction design.
 
 ## Skeleton Plane
 
+Here Are the wireframes of the site for different modern devices 
 - Desktop view
 
 - Mobile view
@@ -278,7 +279,20 @@ the interaction design.
 - Tablet view
 
 ## Surface Plane
+
+To add Visual language to the site, here are the design choices I made.
+
+- This is the designated colour pallet 
 ![Colour pallet for the site](Readme_sourceFiles/pallet.png)
+
+- I want to use different fonts, Google fonts will supply these
+    - The titles must be:  
+    - The text in the cards must be: 
+    - The genral body (body, nav links) font must be: 
+
+- Regarding images:
+    - images in the cards appliance cards must be contained and square
+    
 # Features
 
 In this section, you should go over the different parts of your project, and describe each in a sentence or so.
