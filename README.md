@@ -15,14 +15,15 @@ Essentially, this part is your sales pitch.
 - [Deployment](#Deployment)
 - [Credits](#Credits)
 <!--te-->
-
+![Mock-up](Readme_sourceFiles/mockup.png)
 ---
  
 ## UX
 ### High level considerations
--	Looking at the target audience: This is a very culturally appropriate project. It is a web app that focuses on sharing recipes. 
+-	Looking at the target audience: This is a very culturally appropriate project. 
+It is a web app that focuses on sharing recipes. 
 -	Anybody can use this web app. The content will focus on recipes and food. 
--	Can we track and catalogue the content in an intuitive way? 
+-	We can track and catalogue the content in an intuitive way by using forms and databases
 -	The content will be entered into a database and be displayed to the different pages
 -	Cook books require people to buy the books while this web app provides the recipes for free
 -	The technology we are using is very modern: HTML5, CSS3, JavaScript, Python and MongoDB
@@ -42,8 +43,8 @@ Due to the assessment, business goals are negligible.
 -	Competitors who share their recipes on non-blog sites normally share gifs of their recipe on forums (Reddit) but without knowing that you can control the gif makes it long to find the next step because you will have to wait for the gif to replay before you can see the next step. 
 -	User needs: 
     - Easily find and share recipes 
--	Site owners goal:
-    - Promote cooking equipment (AMC Classic (?)) [maybe]
+-	Site owner’s goal:
+    - Promote cooking equipment (AMC Classic (?)) [Maybe]
 -	Will need to include instructions on site for single use learning
 
 - "First Use" Questions need to be answered so that the  user knows what to expect and what to do next.
@@ -51,7 +52,7 @@ Due to the assessment, business goals are negligible.
 ![The Features diagram](Readme_sourceFiles/tradeOff.png)
 
 
-#### The trade Off
+#### The trade off
 
 - I have rated each feature from 1 - 5 (where 1 is the least and 5 is the most) on importance and viability
 
@@ -67,7 +68,7 @@ number of items, which is 34.
 
 ### Scope Plane trade off
 
-- The features that are open for discusion at the moment (16/11/2020) [DD/MM/YYYY] is the Promotion of Products and the comment section on each recipe becuase they have the lowest 
+- The features that are open for discussion at the moment (16/11/2020) [DD/MM/YYYY] is the Promotion of Products and the comment section on each recipe because they have the lowest 
 viability of all the features
 
 - the project should be done within 3 weeks 
@@ -90,7 +91,7 @@ a user to a individual page to a dedicated recipe as follows:
             for obj in data:
                 # each recipe put into the database will have a url which
                 # will be the name of the food but on submission the correct .methods
-                # will be used for exmaple:  .replace(" ", "_") and .lower()
+                # will be used for example:  .replace(" ", "_") and .lower()
                 if obj['url'] == recipe_url
                     recipe = obj
         return render_template("recipe.html", recipe=food)
@@ -100,7 +101,7 @@ will display directly to the page using jinja syntax.
 
 - an issue with this is:
     - if there is no login system (as stated above) all comments will just appear as paragraphs and will not
-    satify the first time learning and lead to a bad UX. 
+    satisfy the first time learning and lead to a bad UX. 
     - if there is a login system then further research will have to be done to be
      able to incorporate a voting system to rate the most helpful comments and
       to permanently show each comment to the correct url. 
@@ -108,14 +109,14 @@ will display directly to the page using jinja syntax.
         - another issue is that many users using the app are just visitors and will not ant to sign up to this system
     - This means another database needs to be established.
 
-- I believe the comment section should not be included. This is to be disccused in the future in greater detail
+- I believe the comment section should not be included. This is to be discussed in the future in greater detail
 
 #### Promotion of products
 
 - This seems more viable than the comment section 
 - A local Json file can be established with images, names and links 
 of certain cooking equipment used in the different recipes and these can be
- used to promote products. (linkin user to the Official product site)
+ used to promote products. (Linking user to the Official product site)
 
 ### Scope Plane requirements
 - I conducted an interview with my family regarding this section asking them 3 main questions
@@ -124,13 +125,13 @@ of certain cooking equipment used in the different recipes and these can be
             - this can be incorporated under each recipe's individual page 
         - One user wants media - photos/gifs of the recipe
             - this can also be incorporated in each recipe's individual page
-            - more than 1 images will have to be in a gallary
+            - More than 1 images will have to be in a gallery
         - Users said they wanted a difficulty level for each recipe
         - One user said they wanted cooking tips at the side but this is so niche to each recipe
             - what I can do is include a "tips" section in the submission form and this will be displayed as cards on the recipe's page
-                - this will make the data size of each netry a bit larger
+                - This will make the data size of each entry a bit larger
                 - There can be a limit of 3 tips to make sure the most important tips are given
-        - Another user wanted the recipes to already be on the app but this defeats the purpose of the goal: to be able to share recipes
+        - Another user wanted the recipes to already be on the app but this defeat the purpose of the goal: to be able to share recipes
         - Users want to know if the recipe was tested by different users
             - This brings up the problem of the login system which will not be incorporated
         - Users wanted categories for each recipe
@@ -138,7 +139,7 @@ of certain cooking equipment used in the different recipes and these can be
             - There has to be a limit of categories
                 - that means once the category is created, it stays there. No admin control would exist
         - Users wanted cooking "teachings" to teach people using the app how to cooking
-            - but this misses the site's goal and can be considered negligable 
+            - But this misses the site's goal and can be considered negligible 
         - Users wanted a filtering system to be able to filter their searches by difficulty
             - this can be done by creating an index in mongoDB 
     - what they actually need 
@@ -160,7 +161,7 @@ of certain cooking equipment used in the different recipes and these can be
 we can include (outside of the initial features) are:
     - The conversion Table
     - media/ gifs of the recipe
-    - The categories for when the meal is applicable (dinner/lunch/breakfast etc). these will be stored in a database and they will be part of a drop down list in the submission form
+    - The categories for when the meal is applicable (dinner/lunch/breakfast etc.). these will be stored in a database and they will be part of a drop down list in the submission form
     - The filtering system
 - the requirements can't include due to viability is:
     - The difficulty level
@@ -170,26 +171,26 @@ we can include (outside of the initial features) are:
 
 
 - The requirements listed are not features but they are "nice to haves"
-- Incorporating them could round off this project quite nicely and make the projects seem more useful, buildable, objective annd functional
+- Incorporating them could round off this project quite nicely and make the projects seem more useful, buildable, objective and functional
 
 - A non-functional requirement I am seeing is scalability 
     - I will have to move to a better, larger server if the traffic gets too being
-    - this means setting up new environment variables which can be done but will definetvly cost money
+    - this means setting up new environment variables which can be done but will definitely cost money
 
 ### Structure Plane concerns
 
 - The following diagram displays how I plan to organize the functionality & content 
-of the site and how a user might navigate through the site intuitivly 
+of the site and how a user might navigate through the site intuitively 
 
 ![Structure plane](Readme_sourceFiles/Structure_plane.png)
 
 - The user will start at the landing page 
-- At the top will be a nav bar with 5 sections: Share, Find, About, Contact and Home
+- At the top will be a nav bar with 5 sections: Share, Find, About, appliances and Home
     - Share will be a submission form
-    - Find will be a gallary/catalogue with a filter that uses advanced routing
+    - Find will be a gallery/catalogue with a filter that uses advanced routing
      to direct a user to an individual recipe
     - About will give a bit more information on the project's background
-    - Contact will be a form that emails me complaints using an API 
+    - Appliances will be a gallery of appliances from a Json file that links a user to the official site of that appliance
     - Home will take a user to the landing page
 
 - The plan is to have a linear hyperlinked structure that is simple enough
@@ -204,14 +205,14 @@ of the site and how a user might navigate through the site intuitivly
     - Category_name: This will "categorise" the recipes for the filtered searches
     for what meal type is appropriate (see diagram)
     - type: The will also categorise the recipes for the filter system. 
-    - Category_name and type will be a foreign key to the category_name databses and to the Type database
+    - Category_name and type will be a foreign key to the category_name databases and to the Type database
     - Name: will be the name of the recipe
     - instructions and ingredient: these two fields will be in the form of an array of strings. By using Java Script 
-    I plan to created more input fields in the form. For each input field (for the two attributes), that will get pushed into the corresponding array to MongoDB. 
+    I plan to create more input fields in the form. For each input field (for the two attributes), that will get pushed into the corresponding array to MongoDB. 
         - To get this to appear on the recipe's page, I will filter through each item in the array displaying the ingredients in an `<li></li>` child of 
     an `<ul></ul>` and the instructions in an `<li></li>` that is a child of an `<ol></ol>`
     - Img: this will be a url of a gif or a image of the meal 
-    - Finally each databse will have a Primary key autogenerated by MongoDB called "_id"
+    - Finally each database will have a Primary key auto generated by MongoDB called "_id"
 
 ![ERS Diagram of the database](Readme_sourceFiles/ERS_diagram.png)
 This is my attempt at trying to draw an ERS diagram of the databases
@@ -227,18 +228,17 @@ This is my attempt at trying to draw an ERS diagram of the databases
         - there are input fields to enter data 
         - if more ingredients/instructions need to be added there will be a button that "reveals"/"adds" more input fields
         - on submission the form's data will get pushed to the database where the recipe will be on display in the "Find" section
-    - The contact page to contact the page owner
-        - This will be a simple form that will send emails to me
-        - I will use an API for this
-        - Data input includes: Name, Surname, Email and a message which will be the body of the email
+    - The appliance page to promote appliances for the page owner
+        - This will be a simple gallery that will send a user to the site selling that appliances
+        
 - There will have to be instructions presented to the users on each input field to reduce the risk of error
 - The Site will try to Leverage from Prior experience by assuming the user has an expectation of convention
     - Like having the Nav Bar at the top of the page
 
-- The Theme of the page will be consistant and will use the following pallete:
+- The Theme of the page will be consistent and will use the following pallet:
 ![Colour pallet for the site](Readme_sourceFiles/pallet.png)
 
-- By using a Library like bootstrap or materialize (will see which will be more beneficial once in the building phase) the voice of the site will remain consistant and stable
+- By using a Library like bootstrap or materialize (will see which will be more beneficial once in the building phase) the voice of the site will remain consistent and stable
 
 - Due to the simplicity of the structure of the site, the app/site should be very learnable
 
@@ -247,14 +247,28 @@ This is my attempt at trying to draw an ERS diagram of the databases
 - This section is responsible for the creation of organisation and navigational schemes which has already been discussed in the structure plane concerns and 
 the interaction design. 
 
-- the architecture, I believe, is done correctly so that when changes are made the architecture can accomodate those changes
+- the architecture, I believe, is done correctly so that when changes are made the architecture can accommodate those changes
 
 - The architecture forms a Tree Structure which is relatively standard
     - This is known to be problematic on Mobile but with the ease of a burger icon, I plan to reduce those problems
 
 ### Principals of organisation
 
-- The way data will be organised 
+- The way data will be organised as follows:
+    - The organising principles used at the highest levels of the site should be most
+    closely tied to user needs & business objectives
+        - that means a link to share/find a recipe should be in the navigation bar
+        - The link to promote cooking appliances should also be in the Nav
+    - Organising rules at lower levels are influenced by future specs & content requirements
+        - Like the comment section 
+
+### The skeleton Plane
+
+- Desktop view
+
+- Mobile view
+
+- Tablet view
 
 ## Features
 
@@ -285,7 +299,7 @@ In this section, you should mention all of the languages, frameworks, libraries,
     - after the [Deployment](#deployment) sequence I pushed my work to GitHub
     - I got a jinja error
     - I revisited my app.py file and saw I rendered the wrong template which does not exists
-    - To fix this I renamed the template the to correct corresponding template which does exists (sha: 079dc6719fb3d9ca5ac7e4859456d2a042d8becd)
+    - To fix this I renamed the template to the correct corresponding template which does exists (sha: 079dc6719fb3d9ca5ac7e4859456d2a042d8becd)
     - app now successfully launches to Heroku. 
 
 In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
@@ -317,7 +331,7 @@ To deploy this project I followed the following steps:
 4. I created my MongoDB and connected to it
 5. I went to https://dashboard.heroku.com/apps and created my new app
 6. I connected to my GitHub repository via Heroku
-7. I then went to setting and added my configuartion variables (same variables as in my env.py file)
+7. I then went to setting and added my configuration variables (same variables as in my env.py file)
 8. I connected to my master branch and this is the final step of deployment 
 
 In particular, you should provide all details of the differences between the deployed version and the development version, if any, including:
