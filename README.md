@@ -9,6 +9,11 @@ Essentially, this part is your sales pitch.
 <!--ts-->
 
 - [UX](#UX)
+    - [Strategy Plane](#Strategy_plane)
+    - [Scope Plane](#Scope_Plane)
+    - [Structure Plane](#Structure_Plane)
+    - [Skeleton Plane](#Skeleton_Plane)
+    - [Surface Plane](#Surface_Plane)
 - [Features](#Features)
 - [Technologies Used](#Technologies-Used)
 - [Testing](#Testing)
@@ -18,7 +23,8 @@ Essentially, this part is your sales pitch.
 ![Mock-up](Readme_sourceFiles/mockup.png)
 ---
  
-## UX
+# UX
+## Strategy Plane
 ### High level considerations
 -	Looking at the target audience: This is a very culturally appropriate project. 
 It is a web app that focuses on sharing recipes. 
@@ -32,7 +38,7 @@ It is a web app that focuses on sharing recipes.
 
 Due to the assessment, business goals are negligible. 
 
-### Strategy Trade Off 
+### Trade Off 
 
 
 -	I am making a Web app that allows people to find and share recipes  
@@ -65,8 +71,9 @@ number of items, which is 34.
     - this means that all features can be implemented
 
 - Depending on the time constraints the items with the lowest importance will be incorporated last
+## Scope Plane
 
-### Scope Plane trade off
+### Trade off
 
 - The features that are open for discussion at the moment (16/11/2020) [DD/MM/YYYY] is the Promotion of Products and the comment section on each recipe because they have the lowest 
 viability of all the features
@@ -75,7 +82,7 @@ viability of all the features
     - I have 21 days to implement 8 features
     - This means one feature should be implemented every +-3 days  
 
-#### comment section on each recipe
+##### comment section on each recipe
 - I believe using advanced routing features in python (hypothetically) I can redirect
 a user to a individual page to a dedicated recipe as follows: 
 
@@ -118,7 +125,7 @@ will display directly to the page using jinja syntax.
 of certain cooking equipment used in the different recipes and these can be
  used to promote products. (Linking user to the Official product site)
 
-### Scope Plane requirements
+### Requirements
 - I conducted an interview with my family regarding this section asking them 3 main questions
     - what the users say they need
         -  One User wanted a conversion Table
@@ -151,7 +158,7 @@ of certain cooking equipment used in the different recipes and these can be
         - The submission form here is crucial since this is the only logical way to get the recipe online in a clear and comprehensive manner.
         - Users were unaware of the importance of the colour scheme
 
-### Scope Plane requirement types
+### Requirement types
 
 - Looking at the content requirements there will be a lot of mixed content of the multiple pages
     - Images/ gifs, Cards, Ordered and Unordered lists with a lot of text
@@ -177,7 +184,8 @@ we can include (outside of the initial features) are:
     - I will have to move to a better, larger server if the traffic gets too being
     - this means setting up new environment variables which can be done but will definitely cost money
 
-### Structure Plane concerns
+## Structure Plane
+### Concerns
 
 - The following diagram displays how I plan to organize the functionality & content 
 of the site and how a user might navigate through the site intuitively 
@@ -235,7 +243,7 @@ This is my attempt at trying to draw an ERS diagram of the databases
 - The Site will try to Leverage from Prior experience by assuming the user has an expectation of convention
     - Like having the Nav Bar at the top of the page
 
-- The Theme of the page will be consistent and will use the following pallet:
+- The Theme of the page will be consistent 
 ![Colour pallet for the site](Readme_sourceFiles/pallet.png)
 
 - By using a Library like bootstrap or materialize (will see which will be more beneficial once in the building phase) the voice of the site will remain consistent and stable
@@ -262,7 +270,7 @@ the interaction design.
     - Organising rules at lower levels are influenced by future specs & content requirements
         - Like the comment section 
 
-### The skeleton Plane
+## Skeleton Plane
 
 - Desktop view
 
@@ -270,11 +278,13 @@ the interaction design.
 
 - Tablet view
 
-## Features
+## Surface Plane
+
+# Features
 
 In this section, you should go over the different parts of your project, and describe each in a sentence or so.
  
-### Existing Features
+## Existing Features
 - Feature 1 - allows users X to achieve Y, by having them fill out Z
 - ...
 
@@ -282,10 +292,10 @@ For some/all of your features, you may choose to reference the specific project 
 
 In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
 
-### Features Left to Implement
+## Features Left to Implement
 - Another feature idea
 
-## Technologies Used
+# Technologies Used
 
 In this section, you should mention all of the languages, frameworks, libraries, and any other tools that you have used to construct this project. For each, provide its name, a link to its official site and a short sentence of why it was used.
 
@@ -293,7 +303,7 @@ In this section, you should mention all of the languages, frameworks, libraries,
     - The project uses **JQuery** to simplify DOM manipulation.
 
 
-## Testing
+# Testing
 
 1. Testing if Project deploys successfully to Heroku: (Sha: 937c8b93b29328c060febef617a9b8f7421e3a7d)
     - after the [Deployment](#deployment) sequence I pushed my work to GitHub
@@ -320,7 +330,7 @@ You should also mention in this section any interesting bugs or problems you dis
 
 If this section grows too long, you may want to split it off into a separate file and link to it from here.
 
-## Deployment
+# Deployment
 
 Link to the live page: https://keis5ingredientsfoods.herokuapp.com/ 
 
@@ -342,15 +352,15 @@ In particular, you should provide all details of the differences between the dep
 In addition, if it is not obvious, you should also describe how to run your code locally.
 
 
-## Credits
+# Credits
 
-### Content
+## Content
 - The text for section Y was copied from the [Wikipedia article Z](https://en.wikipedia.org/wiki/Z)
 
-### Media
+## Media
 - The photos used in this site were obtained from ...
 - The colour scheme was created by me, Inspired by [this arcticle](https://www.quora.com/What-color-scheme-to-choose-for-food-website) but I used [Palleton](https://paletton.com/#uid=1000u0kllllaFw0g0qFqFg0w0aF)
 
-### Acknowledgements
+## Acknowledgements
 
 - I received inspiration for this project from X
