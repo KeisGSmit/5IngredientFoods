@@ -9,11 +9,11 @@ Essentially, this part is your sales pitch.
 <!--ts-->
 
 - [UX](#UX)
-    - [Strategy Plane](#Strategy_plane)
-    - [Scope Plane](#Scope_Plane)
-    - [Structure Plane](#Structure_Plane)
-    - [Skeleton Plane](#Skeleton_Plane)
-    - [Surface Plane](#Surface_Plane)
+    - [Strategy Plane](#Strategy-plane)
+    - [Scope Plane](#Scope-Plane)
+    - [Structure Plane](#Structure-Plane)
+    - [Skeleton Plane](#Skeleton-Plane)
+    - [Surface Plane](#Surface-Plane)
 - [Features](#Features)
 - [Technologies Used](#Technologies-Used)
 - [Testing](#Testing)
@@ -58,7 +58,7 @@ Due to the assessment, business goals are negligible.
 ![The Features diagram](Readme_sourceFiles/tradeOff.png)
 
 
-#### The trade off
+### The trade off
 
 - I have rated each feature from 1 - 5 (where 1 is the least and 5 is the most) on importance and viability
 
@@ -244,7 +244,6 @@ This is my attempt at trying to draw an ERS diagram of the databases
     - Like having the Nav Bar at the top of the page
 
 - The Theme of the page will be consistent 
-![Colour pallet for the site](Readme_sourceFiles/pallet.png)
 
 - By using a Library like bootstrap or materialize (will see which will be more beneficial once in the building phase) the voice of the site will remain consistent and stable
 
@@ -279,7 +278,7 @@ the interaction design.
 - Tablet view
 
 ## Surface Plane
-
+![Colour pallet for the site](Readme_sourceFiles/pallet.png)
 # Features
 
 In this section, you should go over the different parts of your project, and describe each in a sentence or so.
