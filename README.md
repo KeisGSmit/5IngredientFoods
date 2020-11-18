@@ -292,7 +292,7 @@ To add Visual language to the site, here are the design choices I made.
 
 - Regarding images:
     - images in the cards appliance cards must be contained and square
-    
+
 # Features
 
 In this section, you should go over the different parts of your project, and describe each in a sentence or so.
@@ -312,8 +312,34 @@ In addition, you may also use this section to discuss plans for additional featu
 
 In this section, you should mention all of the languages, frameworks, libraries, and any other tools that you have used to construct this project. For each, provide its name, a link to its official site and a short sentence of why it was used.
 
+## Languages
+
+- [HTML](https://en.wikipedia.org/wiki/HTML5)
+- [CSS](https://en.wikipedia.org/wiki/Cascading_Style_Sheets#CSS_3)
+- [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+- [Pyhton3](https://www.python.org/downloads/release/python-380/)
+
+### Tools
+
+- [Autoprefixer](https://autoprefixer.github.io/)
+- [Markup Validation service](https://validator.w3.org/)
+- [GitHub](https://github.com/)
+- [Git](https://git-scm.com/)
+- [Gitpod](https://chrome.google.com/webstore/detail/gitpod-online-ide/dodmmooeoklaejobgleioelladacbeki?hl=en)
+- [VSC](https://code.visualstudio.com/download)
+- [Microsoft Office](https://www.office.com/)
+- [favicon](https://www.favicon.cc/)
+- [JSHint](https://jshint.com/)
+
+### Frameworks
+
+- [Bootstrap](https://getbootstrap.com/)
+- [Popper](https://popper.js.org/) - this as used with the bootstrap JS CDN
+
+### libraries
+
 - [JQuery](https://jquery.com)
-    - The project uses **JQuery** to simplify DOM manipulation.
+
 
 
 # Testing
