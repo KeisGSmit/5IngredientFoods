@@ -8,10 +8,30 @@
     <!--Materialize CSS CDN-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <!--My CSS file-->
-    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
     <title>5 Minute Foods</title>
 </head>
 <body>
+<nav class="background-color-primary-0">
+    <div class="nav-wrapper">
+        <a href="#!" class="brand-logo" id="logo">Logo</a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
+        <ul class="right hide-on-med-and-down">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Share</a></li>
+            <li><a href="#">Find</a></li>
+            <li><a href="#">Appliances</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+    </div>
+</nav>
+<ul class="sidenav" id="mobile-demo">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Share</a></li>
+    <li><a href="#">Find</a></li>
+    <li><a href="#">Appliances</a></li>
+    <li><a href="#">About</a></li>
+</ul>
 {% block content %}
 {% endblock %} 
 </body>
