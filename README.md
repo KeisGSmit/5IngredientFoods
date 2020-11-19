@@ -333,8 +333,17 @@ In this section, you should mention all of the languages, frameworks, libraries,
 
 ### Frameworks
 
-- [Bootstrap](https://getbootstrap.com/)
-- [Popper](https://popper.js.org/) - this as used with the bootstrap JS CDN
+- [Materialize](https://materializecss.com/)
+- [Font Awesome icons](https://fontawesome.com/icons?d=gallery)
+
+The following are frameworks imported from the cheese shop (They can be found in requirements.txt). 
+- [Flask](https://pypi.org/project/Flask/)
+- [PyMongo](https://pypi.org/project/pymongo/)
+- [Click](https://pypi.org/project/click/)
+- [DNSPython](https://pypi.org/project/dnspython/)
+- [Flask-PyMongo](https://pypi.org/project/Flask-PyMongo/)
+- [itsdangerous](https://pypi.org/project/itsdangerous/)
+- [Werkzeug](https://pypi.org/project/Werkzeug/)
 
 ### libraries
 
