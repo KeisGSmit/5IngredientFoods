@@ -45,7 +45,7 @@ Due to the assessment, business goals are negligible.
 -	The value we provide is to be able to quickly find recipes and share them. 
 -	Anyone is allowed to use the website (Due to this I am reluctant to use a login system)
     - But I will add a input field in the submission form that asks for a password
-        - This is so that the creator of the recipe can delete a recipe they are not happy with
+        - This is so that the creator of the recipe can delete/edit a recipe they are not happy with
 -	People looking for recipes are people who do not know what to make for breakfast/dinner/lunch so we aim to provide as many recipes for these as possible. 
 -	Competitors normally share their recipes in a blog which makes it tedious because as a user, we do not care about the blogger’s life story regarding that recipe, we just want the recipe. 
 -	Competitors who share their recipes on non-blog sites normally share gifs of their recipe on forums (Reddit) but without knowing that you can control the gif makes it long to find the next step because you will have to wait for the gif to replay before you can see the next step. 
@@ -277,7 +277,7 @@ the interaction design.
 ## Skeleton Plane
 
 Here Are the wireframes of the site for different modern devices 
-- Desktop view
+- [Desktop view](Readme_sourceFiles/DesktopWireframe.pdf)
 
 - Mobile view
 
