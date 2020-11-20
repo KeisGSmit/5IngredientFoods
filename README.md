@@ -413,9 +413,8 @@ In addition, if it is not obvious, you should also describe how to run your code
 - The text for section Y was copied from the [Wikipedia article Z](https://en.wikipedia.org/wiki/Z)
 
 ## Media
-- The photos used in this site were obtained from ...
 - The colour scheme was created by me, Inspired by [this arcticle](https://www.quora.com/What-color-scheme-to-choose-for-food-website) but I used [Palleton](https://paletton.com/#uid=1000u0kllllaFw0g0qFqFg0w0aF)
-
+- The images for the site was obtained from [Unspalsh](https://unsplash.com/)
 ## Acknowledgements
 
 - I received inspiration for this project from X
