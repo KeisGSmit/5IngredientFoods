@@ -14,23 +14,23 @@
 <body>
 <nav class="background-color-primary-0">
     <div class="nav-wrapper">
-        <a href="#!" class="brand-logo">Logo</a>
+        <a href="#!" class="brand-logo">5 Minute foods</a>
         <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
         <ul class="right hide-on-med-and-down">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Share</a></li>z
-            <li><a href="#">Find</a></li>
-            <li><a href="#">Appliances</a></li>
-            <li><a href="#">About</a></li>
+            <li><a href="{{ url_for('home')}}">Home</a></li>
+            <li><a href="{{ url_for('share')}}">Share</a></li>
+            <li><a href="{{ url_for('find')}}">Find</a></li>
+            <li><a href="{{ url_for('appliance')}}">Appliances</a></li>
+            <li><a href="{{ url_for('about')}}">About</a></li>
         </ul>
     </div>
 </nav>
 <ul class="sidenav" id="mobile-demo">
-    <li><a href="#">Home</a></li>
-    <li><a href="#">Share</a></li>
-    <li><a href="#">Find</a></li>
-    <li><a href="#">Appliances</a></li>
-    <li><a href="#">About</a></li>
+    <li><a href="{{ url_for('home')}}">Home</a></li>
+    <li><a href="{{ url_for('share')}}">Share</a></li>
+    <li><a href="{{ url_for('find')}}">Find</a></li>
+    <li><a href="{{ url_for('appliance')}}">Appliances</a></li>
+    <li><a href="{{ url_for('about')}}">About</a></li>
 </ul>
 {% block content %}
 {% endblock %} 
