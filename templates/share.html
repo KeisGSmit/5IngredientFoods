@@ -1,3 +1,90 @@
 {% extends 'base.html' %}
 {% block content %}
+<div class="container">
+    <div class="section">
+        <div class="row">
+            <div class="slider">
+                <ul class="slides">
+                    <li><img src="https://images.unsplash.com/photo-1515516089376-88db1e26e9c0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80">
+                    <div class="caption right-align">
+                        <h3>Share your recipes</h3>
+                    </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="section">
+        <div class="row center-align">
+            <h1>Share a Recipe</h1>
+        </div>
+        <div class="row">
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input placeholder="Recipe Name" id="recipe_name" type="text" class="validate" required>
+                        <label for="recipe_name">Recipe Name</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <select required>
+                            <option value="" disabled selected>Choose your option</option>
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option>
+                        </select>
+                        <label>Category</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <select required>
+                            <option value="" disabled selected>Choose your option</option>
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option>
+                        </select>
+                        <label>Type</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="Instructions" type="text" class="validate" required>
+                        <label for="Instructions">Instructions</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <a class="waves-effect waves-light btn"><i class="fas fa-plus-circle"></i> Add Instructions</a>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="Ingredients" type="text" class="validate" required>
+                        <label for="Ingredients">Ingredients</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <a class="waves-effect waves-light btn"><i class="fas fa-plus-circle"></i> Add Ingredients</a>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="photo" type="text" class="validate" required>
+                        <label for="photo">Photo Url</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="password" type="text" class="validate" required>
+                        <label for="password">Your Recipe's Password</label>
+                    </div>
+                </div>
+                <div class="row center-align">
+                    <button class="btn waves-effect waves-light" type="submit" name="action">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 {% endblock%}
