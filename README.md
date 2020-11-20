@@ -333,8 +333,17 @@ In this section, you should mention all of the languages, frameworks, libraries,
 
 ### Frameworks
 
-- [Bootstrap](https://getbootstrap.com/)
-- [Popper](https://popper.js.org/) - this as used with the bootstrap JS CDN
+- [Materialize](https://materializecss.com/)
+- [Font Awesome icons](https://fontawesome.com/icons?d=gallery)
+
+The following are frameworks imported from the cheese shop (They can be found in requirements.txt). 
+- [Flask](https://pypi.org/project/Flask/)
+- [PyMongo](https://pypi.org/project/pymongo/)
+- [Click](https://pypi.org/project/click/)
+- [DNSPython](https://pypi.org/project/dnspython/)
+- [Flask-PyMongo](https://pypi.org/project/Flask-PyMongo/)
+- [itsdangerous](https://pypi.org/project/itsdangerous/)
+- [Werkzeug](https://pypi.org/project/Werkzeug/)
 
 ### libraries
 
@@ -351,6 +360,13 @@ In this section, you should mention all of the languages, frameworks, libraries,
     - To fix this I renamed the template to the correct corresponding template which does exists (sha: 079dc6719fb3d9ca5ac7e4859456d2a042d8becd)
     - app now successfully launches to Heroku. 
 
+2. Testing if CSS and JS files are successfully connected to the base.html
+    - In the base.html I linked Jquery, my CSS file(static/css/style.css using Jinja) and my JavaScript file (static/js/main.js using Jinja)
+    - I changed the font colour in the CSS file and the h1 font changed - Thus successful 
+    - I added a button to base.html and added Jquery code to my JavaScript file that will change the background colour and the font colour 
+        - on click the button changed color and background color - Thus successful
+    - My CSS file and JavaScript files are successfully connected
+    
 In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
 
 Whenever it is feasible, prefer to automate your tests, and if you've done so, provide a brief explanation of your approach, link to the test file(s) and explain how to run them.
@@ -397,9 +413,8 @@ In addition, if it is not obvious, you should also describe how to run your code
 - The text for section Y was copied from the [Wikipedia article Z](https://en.wikipedia.org/wiki/Z)
 
 ## Media
-- The photos used in this site were obtained from ...
 - The colour scheme was created by me, Inspired by [this arcticle](https://www.quora.com/What-color-scheme-to-choose-for-food-website) but I used [Palleton](https://paletton.com/#uid=1000u0kllllaFw0g0qFqFg0w0aF)
-
+- The images for the site was obtained from [Unspalsh](https://unsplash.com/)
 ## Acknowledgements
 
 - I received inspiration for this project from X
