@@ -64,5 +64,41 @@
 }
 .appliance-images{
     height: 150px;
-    width: 150px;
+    width: auto;
+}
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1200px) { 
+    .appliance-images{
+        height: 100px;
+        width: 100px;
+    }
+ }
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 992px) { 
+    .appliance-images{
+        height: 100px;
+        width: 100px;
+    }
+}
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 768px) {
+    .appliance-images{
+        height: 100px;
+        width: 100px;
+    }
+}
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 576px) {
+    .appliance-images{
+        height: 100px;
+        width: 100px;
+    }
+}
+/* Extra-extra small devices (Galaxy fold, less than 281px) */
+@media (max-width: 281px) {
+    .appliance-images{
+        height: 50px;
+        width: 50px;
+    }
 }
