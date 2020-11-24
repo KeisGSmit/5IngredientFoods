@@ -22,12 +22,14 @@
         </div>
         <div class="row">
             <form class="col s12">
+<!--Recipe Name Input fields-->
                 <div class="row">
                     <div class="input-field col s6">
                         <input placeholder="Recipe Name" id="recipe_name" type="text" class="validate" required>
                         <label for="recipe_name">Recipe Name</label>
                     </div>
                 </div>
+<!--Category Input fields-->
                 <div class="row">
                     <div class="input-field col s12">
                         <select required>
@@ -39,6 +41,7 @@
                         <label>Category</label>
                     </div>
                 </div>
+<!--Type Input fields-->
                 <div class="row">
                     <div class="input-field col s12">
                         <select required>
@@ -50,36 +53,34 @@
                         <label>Type</label>
                     </div>
                 </div>
+<!--Instructions fields-->
                 <div class="row">
-                    <div class="input-field col s12">
+    <!--Instructions input-->
+                    <div class="input-field col s12 instructions_input_fields">
                         <input id="Instructions" type="text" class="validate" required>
                         <label for="Instructions">Instructions</label>
                     </div>
+    <!-- add Instructions button-->
+                    <a class="waves-effect waves-light btn add_field_instructions"><i class="fas fa-plus-circle"></i> Add Instructions</a>
                 </div>
+<!--Ingredients fields-->
                 <div class="row">
-                    <a class="waves-effect waves-light btn"><i class="fas fa-plus-circle"></i> Add Instructions</a>
-                </div>
-                <div class="row">
-                    <div class="input-field col s12">
+    <!--Ingredients input-->
+                    <div class="input-field col s12 ingredients_input_fields">
                         <input id="Ingredients" type="text" class="validate" required>
                         <label for="Ingredients">Ingredients</label>
                     </div>
+    <!--add Ingredients bitton-->
+                    <a class="waves-effect waves-light btn add_field_ingredients"><i class="fas fa-plus-circle"></i> Add Ingredients</a>
                 </div>
-                <div class="row">
-                    <a class="waves-effect waves-light btn"><i class="fas fa-plus-circle"></i> Add Ingredients</a>
-                </div>
+<!--Photo Input field-->
                 <div class="row">
                     <div class="input-field col s12">
                         <input id="photo" type="text" class="validate" required>
                         <label for="photo">Photo Url</label>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="input-field col s12">
-                        <input id="password" type="text" class="validate" required>
-                        <label for="password">Your Recipe's Password</label>
-                    </div>
-                </div>
+
                 <div class="row center-align">
                     <button class="btn waves-effect waves-light" type="submit" name="action">Submit</button>
                 </div>
