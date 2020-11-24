@@ -21,65 +21,66 @@
             <h1>Share a Recipe</h1>
         </div>
         <div class="row">
-            <form class="col s12">
+            <form class="col s12" method="POST" action="{{ url_for('share') }}">
+<!--Recipe Name Input fields-->
                 <div class="row">
                     <div class="input-field col s6">
-                        <input placeholder="Recipe Name" id="recipe_name" type="text" class="validate" required>
+                        <input placeholder="Recipe Name" id="recipe_name" name="recipe_name" type="text" class="validate" required>
                         <label for="recipe_name">Recipe Name</label>
                     </div>
                 </div>
+<!--Category Input fields-->
                 <div class="row">
                     <div class="input-field col s12">
-                        <select required>
-                            <option value="" disabled selected>Choose your option</option>
-                            <option value="1">Option 1</option>
-                            <option value="2">Option 2</option>
-                            <option value="3">Option 3</option>
+                        <select name="category" required>
+                            <option value="" disabled selected>Which meal time is most suitable? (Breakfast/Lunch/Dinner)</option>
+                        {% for category in categories %}
+                            <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                        {% endfor %}
                         </select>
                         <label>Category</label>
                     </div>
                 </div>
+<!--Type Input fields-->
                 <div class="row">
                     <div class="input-field col s12">
-                        <select required>
-                            <option value="" disabled selected>Choose your option</option>
-                            <option value="1">Option 1</option>
-                            <option value="2">Option 2</option>
-                            <option value="3">Option 3</option>
+                        <select name="type" required>
+                            <option value="" disabled selected>Would you have this as a Main? or a Side? You chose</option>
+                        {% for type in types %}
+                            <option value="{{ type.type_name }}">{{ type.type_name }}</option>
+                        {% endfor %}
                         </select>
                         <label>Type</label>
                     </div>
                 </div>
+<!--Instructions fields-->
                 <div class="row">
-                    <div class="input-field col s12">
-                        <input id="Instructions" type="text" class="validate" required>
+    <!--Instructions input-->
+                    <div class="input-field col s12 instructions_input_fields">
+                        <input id="Instructions" type="text" class="validate" name="instructions" required>
                         <label for="Instructions">Instructions</label>
                     </div>
+    <!-- add Instructions button-->
+                    <a class="waves-effect waves-light btn add_field_instructions"><i class="fas fa-plus-circle"></i> Add Instructions</a>
                 </div>
+<!--Ingredients fields-->
                 <div class="row">
-                    <a class="waves-effect waves-light btn"><i class="fas fa-plus-circle"></i> Add Instructions</a>
-                </div>
-                <div class="row">
-                    <div class="input-field col s12">
-                        <input id="Ingredients" type="text" class="validate" required>
+    <!--Ingredients input-->
+                    <div class="input-field col s12 ingredients_input_fields">
+                        <input id="Ingredients" type="text" class="validate" name="ingredients" required>
                         <label for="Ingredients">Ingredients</label>
                     </div>
+    <!--add Ingredients bitton-->
+                    <a class="waves-effect waves-light btn add_field_ingredients"><i class="fas fa-plus-circle"></i> Add Ingredients</a>
                 </div>
-                <div class="row">
-                    <a class="waves-effect waves-light btn"><i class="fas fa-plus-circle"></i> Add Ingredients</a>
-                </div>
+<!--Photo Input field-->
                 <div class="row">
                     <div class="input-field col s12">
-                        <input id="photo" type="text" class="validate" required>
+                        <input id="photo" type="text" class="validate" name="photo" required>
                         <label for="photo">Photo Url</label>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="input-field col s12">
-                        <input id="password" type="text" class="validate" required>
-                        <label for="password">Your Recipe's Password</label>
-                    </div>
-                </div>
+<!--Submit button-->
                 <div class="row center-align">
                     <button class="btn waves-effect waves-light" type="submit" name="action">Submit</button>
                 </div>
