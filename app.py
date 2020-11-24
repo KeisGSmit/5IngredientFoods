@@ -37,10 +37,22 @@ def appliance():
     return render_template("appliance.html", appliances=data)
 
 
-@app.route("/share")
+@app.route("/share", methods=["GET", "POST"])
 def share():
     categories = mongo.db.category.find().sort("category_name", 1)
     types = mongo.db.type.find().sort("type_name", 1)
+    if request.method == "POST":
+        recipe = {
+                "recipe_name": request.form.get("recipe_name"),
+                "type": request.form.get("type"),
+                "category": request.form.get("category"),
+                "instructions": request.form.getlist("instructions"),
+                "ingredients": request.form.getlist("ingredients"),
+                "Photo": request.form.get("photo")
+            }
+        mongo.db.recipes.insert_one(recipe)
+        return redirect(url_for('home'))
+
     return render_template("share.html", categories=categories, types=types)
 
 
