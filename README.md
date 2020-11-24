@@ -366,6 +366,22 @@ The following are frameworks imported from the cheese shop (They can be found in
     - I added a button to base.html and added Jquery code to my JavaScript file that will change the background colour and the font colour 
         - on click the button changed color and background color - Thus successful
     - My CSS file and JavaScript files are successfully connected
+
+3. Testing the "responsive" images of cards in applainces.html
+    - I first set all images to have dimesnions 100px X 100 px
+    - Not all devices supported these dimesnions
+    - I added media queries in style.css to chnage dimensions of the images appropriately 
+    - Due to the layout It was not successful 
+    - I changed the layout of the cards and chnaged some values in the media Queries 
+    - Cards now Successfully show the images and are appropriate for the following devices (in portrait and Landacape):
+        - laptops
+        - Moto G4
+        - Galaxy S5
+        - Pixel 2/2XL
+        - IPhone 5/SE/6/7/8/8 Plus/X
+        - IPad & IPad Pro
+        - Surface duo 
+        - Galaxy Fold 
     
 In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
 
