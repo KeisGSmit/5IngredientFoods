@@ -25,7 +25,7 @@
 <!--Recipe Name Input fields-->
                 <div class="row">
                     <div class="input-field col s6">
-                        <input placeholder="Recipe Name" id="recipe_name" type="text" class="validate" required>
+                        <input placeholder="Recipe Name" id="recipe_name" name="recipe_name" type="text" class="validate" required>
                         <label for="recipe_name">Recipe Name</label>
                     </div>
                 </div>
@@ -33,10 +33,10 @@
                 <div class="row">
                     <div class="input-field col s12">
                         <select required>
-                            <option value="" disabled selected>Choose your option</option>
-                            <option value="1">Option 1</option>
-                            <option value="2">Option 2</option>
-                            <option value="3">Option 3</option>
+                            <option value="" disabled selected>Which meal time is most suitable? (Breakfast/Lunch/Dinner)</option>
+                        {% for category in categories %}
+                            <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                        {% endfor %}
                         </select>
                         <label>Category</label>
                     </div>
@@ -45,10 +45,10 @@
                 <div class="row">
                     <div class="input-field col s12">
                         <select required>
-                            <option value="" disabled selected>Choose your option</option>
-                            <option value="1">Option 1</option>
-                            <option value="2">Option 2</option>
-                            <option value="3">Option 3</option>
+                            <option value="" disabled selected>Would you have this as a Main? or a Side? You chose</option>
+                        {% for type in types %}
+                            <option value="{{ type.type_name }}">{{ type.type_name }}</option>
+                        {% endfor %}
                         </select>
                         <label>Type</label>
                     </div>
@@ -57,7 +57,7 @@
                 <div class="row">
     <!--Instructions input-->
                     <div class="input-field col s12 instructions_input_fields">
-                        <input id="Instructions" type="text" class="validate" required>
+                        <input id="Instructions" type="text" class="validate" name="Instructions1" required>
                         <label for="Instructions">Instructions</label>
                     </div>
     <!-- add Instructions button-->
@@ -67,7 +67,7 @@
                 <div class="row">
     <!--Ingredients input-->
                     <div class="input-field col s12 ingredients_input_fields">
-                        <input id="Ingredients" type="text" class="validate" required>
+                        <input id="Ingredients" type="text" class="validate" name="ingredients1" required>
                         <label for="Ingredients">Ingredients</label>
                     </div>
     <!--add Ingredients bitton-->
@@ -76,11 +76,11 @@
 <!--Photo Input field-->
                 <div class="row">
                     <div class="input-field col s12">
-                        <input id="photo" type="text" class="validate" required>
+                        <input id="photo" type="text" class="validate" name="photo" required>
                         <label for="photo">Photo Url</label>
                     </div>
                 </div>
-
+<!--Submit button-->
                 <div class="row center-align">
                     <button class="btn waves-effect waves-light" type="submit" name="action">Submit</button>
                 </div>

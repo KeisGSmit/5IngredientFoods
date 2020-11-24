@@ -15,8 +15,9 @@ $(document).ready(function() {
 		page.preventDefault();
 		if(instructions_count < max_fields_instructions){ //max input box allowed
             instructions_count++; //text box increment
+            instruction_name = "instruction" + instructions_count
             //add input box
-			$(instructions_input_fields).append('<div><input id= "Instructions" type="text" class="validate" required><a href="#" class="btn-small background-color-secondary-2-1 remove_field">Remove</a></div>');
+			$(instructions_input_fields).append('<div><input name ="' + instruction_name +'" type="text" class="validate" required><a href="#" class="btn-small background-color-secondary-2-1 remove_field">Remove</a></div>');
 		}
 	});
 	
@@ -33,7 +34,8 @@ $(document).ready(function() {
         page.preventDefault();
         if(ingredients_count < max_fields_ingredients){
             ingredients_count++;
-            $(ingredients_input_fields).append('<div><input id= "Ingredients" type="text" class="validate" required><a href="#" class="btn-small background-color-secondary-2-1 remove_field">Remove</a></div>')
+            ingredient_name = "ingredient" + ingredients_count
+            $(ingredients_input_fields).append('<div><input name= "' + ingredient_name + '" type="text" class="validate" required><a href="#" class="btn-small background-color-secondary-2-1 remove_field">Remove</a></div>')
         }
     });
 

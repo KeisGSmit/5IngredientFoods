@@ -39,7 +39,9 @@ def appliance():
 
 @app.route("/share")
 def share():
-    return render_template("share.html")
+    categories = mongo.db.category.find().sort("category_name", 1)
+    types = mongo.db.type.find().sort("type_name", 1)
+    return render_template("share.html", categories=categories, types=types)
 
 
 @app.route("/find")
