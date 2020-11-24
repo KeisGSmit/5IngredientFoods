@@ -61,10 +61,12 @@ def find():
     recipes = mongo.db.recipes.find()
     return render_template("find.html", recipes=recipes)
 
+
 @app.route("/recipe/<recipe_id>")
 def recipe(recipe_id):
     indv_recipe = mongo.db.recipe.find_one({"_id": ObjectId(recipe_id)})
     return render_template('recipe.html', recipe=indv_recipe)
+
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
