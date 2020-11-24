@@ -434,3 +434,4 @@ In addition, if it is not obvious, you should also describe how to run your code
 ## Acknowledgements
 
 - I was able to dynamically add content fields and recieved inspiration from [Sanwebe](https://www.sanwebe.com/2013/03/addremove-input-fields-dynamically-with-jquery)
+- To be able to add the instructions and ingredients as an array to my collection in MongoDB, [Miklos](https://github.com/Sarosim) helpped me
