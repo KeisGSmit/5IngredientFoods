@@ -393,6 +393,12 @@ The following are frameworks imported from the cheese shop (They can be found in
     - I changed the collection back to the orignal target for the insert function
     - Form now submits correct data to the right collection 
 
+5. Rendering recipe.html 
+    - I added the corresponding app route and Jinja returned a TypeError saything that I can not iterate over the object
+    - I removed the Jinja for loop and my page rendered but the injected data does not show up
+    - I changed the collection from recipe to recipes in the route 
+    - data from the collection now renders to recipe.html successfully 
+
 In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
 
 Whenever it is feasible, prefer to automate your tests, and if you've done so, provide a brief explanation of your approach, link to the test file(s) and explain how to run them.
@@ -445,3 +451,4 @@ In addition, if it is not obvious, you should also describe how to run your code
 
 - I was able to dynamically add content fields and recieved inspiration from [Sanwebe](https://www.sanwebe.com/2013/03/addremove-input-fields-dynamically-with-jquery)
 - To be able to add the instructions and ingredients as an array to my collection in MongoDB, [Miklos](https://github.com/Sarosim) helpped me
+- [Igor](https://github.com/bravoalpha79) assisted me in being able to get data to show up in recipe.html 

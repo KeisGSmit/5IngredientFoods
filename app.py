@@ -64,8 +64,9 @@ def find():
 
 @app.route("/recipe/<recipe_id>")
 def recipe(recipe_id):
-    indv_recipe = mongo.db.recipe.find_one({"_id": ObjectId(recipe_id)})
-    return render_template('recipe.html', recipe=indv_recipe)
+    recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    print(recipe)
+    return render_template('recipe.html', recipe=recipe)
 
 
 if __name__ == "__main__":
