@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <div class="section">
+        <div class="row">
+            <div class="slider">
+                <ul class="slides">
+                    <li><img src="https://images.unsplash.com/photo-1447279506476-3faec8071eee?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80">
+                    <div class="caption right-align">
+                        <h3>Find the right recipe for you</h3>
+                    </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="section">
+        <div class="row">
+            <div class="col s12 center-align">
+                <h4>{{ recipe.recipe_name }}</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12 m4 left-align">
+                <h5>Ingredients</h5>
+                <ul>
+                {% for ingredients in recipe.ingredients %}
+                <li>{{ingredients}}</li>
+                {% endfor %}
+                </ul>
+            </div>
+            <div class="col s12 m4 center-align">
+            <img src="{{recipe.Photo}}" alt="Image of the recipe" class="responsive-img">
+            </div>
+            <div class="col s12 m4 right-align">
+                <h5>Instructions</h5>
+                <ol>
+                {% for instructions in recipe.instructions %}
+                <li>{{instructions}}</li>
+                {% endfor %}
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="section">
+        <div class="row">
+            <div class="col s12 center-align">
+                <img src="{{ url_for('static', filename='img/KitchenConversions.jpg')}}" alt="Conversion table of kitchen measurements">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="section">
+        <div class="row">
+            <div class="col s12 center-align">
+                <a class="waves-effect waves-light btn-large"><i class="material-icons left">cloud</i>Update</a>
+                <a class="waves-effect waves-light btn-large"><i class="material-icons right">cloud</i>Delete</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock%}

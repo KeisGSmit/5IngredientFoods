@@ -58,7 +58,15 @@ def share():
 
 @app.route("/find")
 def find():
-    return render_template("find.html")
+    recipes = mongo.db.recipes.find()
+    return render_template("find.html", recipes=recipes)
+
+
+@app.route("/recipe/<recipe_id>")
+def recipe(recipe_id):
+    recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    print(recipe)
+    return render_template('recipe.html', recipe=recipe)
 
 
 if __name__ == "__main__":
