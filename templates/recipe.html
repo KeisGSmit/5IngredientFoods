@@ -18,7 +18,46 @@
 <div class="container">
     <div class="section">
         <div class="row">
-            <h1>{{ recipe.recipe_name }}</h1>
+            <div class="col s12 center-align">
+                <h4>{{ recipe.recipe_name }}</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12 m4 left-align">
+                <h5>Ingredients</h5>
+                <ul>
+                {% for ingredients in recipe.ingredients %}
+                <li>{{ingredients}}</li>
+                {% endfor %}
+                </ul>
+            </div>
+            <div class="col s12 m4 center-align">
+            <img src="{{recipe.Photo}}" alt="Image of the recipe">
+            </div>
+            <div class="col s12 m4 right-align">
+                <h5>Instructions</h5>
+                <ol>
+                {% for instructions in recipe.instructions %}
+                <li>{{instructions}}</li>
+                {% endfor %}
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="section">
+        <div class="row">
+            <div class="col s12 center-align">
+                <img src="{{ url_for('static', filename='img/KitchenConversions.jpg')}}" alt="Conversion table of kitchen measurements">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="section">
+        <div class="row">
+        
         </div>
     </div>
 </div>

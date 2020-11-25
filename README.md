@@ -447,6 +447,7 @@ In addition, if it is not obvious, you should also describe how to run your code
 ## Media
 - The colour scheme was created by me, Inspired by [this arcticle](https://www.quora.com/What-color-scheme-to-choose-for-food-website) but I used [Palleton](https://paletton.com/#uid=1000u0kllllaFw0g0qFqFg0w0aF)
 - The images for the site was obtained from [Unspalsh](https://unsplash.com/)
+- The conversion table in recipe.html can be found [here](https://sugarandcharm.com/charming-printable-kitchen-conversion-chart)
 ## Acknowledgements
 
 - I was able to dynamically add content fields and recieved inspiration from [Sanwebe](https://www.sanwebe.com/2013/03/addremove-input-fields-dynamically-with-jquery)
