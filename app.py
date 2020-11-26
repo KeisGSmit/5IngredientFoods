@@ -69,6 +69,21 @@ def recipe(recipe_id):
     return render_template('recipe.html', recipe=recipe)
 
 
+@app.route('/update/<recipeId>')
+def update(recipeId):
+    update = mongo.db.recipes.find_one({"_id": ObjectId(recipeId)})
+    categories = mongo.db.category.find().sort("category_name", 1)
+    types = mongo.db.type.find().sort("type_name", 1)
+    all_ingredients = range(0, len(update['ingredients']))
+    all_instructions = range(0, len(update['instructions']))
+    return render_template("update.html",
+                            recipe=update,
+                            categories=categories,
+                            types=types,
+                            all_ingredients=all_ingredients,
+                            all_instructions=all_instructions)
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),

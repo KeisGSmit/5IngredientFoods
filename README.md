@@ -399,6 +399,15 @@ The following are frameworks imported from the cheese shop (They can be found in
     - I changed the collection from recipe to recipes in the route 
     - data from the collection now renders to recipe.html successfully 
 
+6. Getting the update button to load data on the update.html page
+    - In recipe.html I added a update button which parses a varibale (Recipe ID) to app.py
+    - I created a app route and function in app.py that renders update.html and takes the parsed variable as a parameter
+    - I tried to look for the recipe ID and got a `bson.errors.InvalidId error: 'recipe' is not a valid ObjectId, it must be a 12-byte input or a 24-character hex string`
+    - I renamed variables in the HTML file and I renamed variables in the python file so that the word recipe does not appear in the error but it still does.
+    - I googled the error and found a article on (stackoverflow)[https://stackoverflow.com/questions/30136945/how-can-i-get-a-valid-object-id-of-mongodb-from-a-string]
+     but the user asking the question, his id string was 22 characters long and mine is 24 which should be acceptable for the error but it isn't.
+    - I reached out to the code institute tutor support but as soon as I restarted the app the error was gone and my page loaded successfully  
+
 In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
 
 Whenever it is feasible, prefer to automate your tests, and if you've done so, provide a brief explanation of your approach, link to the test file(s) and explain how to run them.
