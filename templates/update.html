@@ -18,14 +18,14 @@
 <div class="container">
     <div class="section">
         <div class="row center-align">
-            <h1>Share a Recipe</h1>
+            <h1>Update Recipe</h1>
         </div>
         <div class="row">
-            <form class="col s12" method="POST" action="{{ url_for('share') }}">
+            <form class="col s12" method="POST" action="{{url_for('update', recipeId=recipe._id)}}">
 <!--Recipe Name Input fields-->
                 <div class="row">
                     <div class="input-field col s6">
-                        <input placeholder="Recipe Name" value="{{recipe.recipe_name}}"id="recipe_name" name="recipe_name" type="text" class="validate" required>
+                        <input placeholder="Recipe Name" value="{{recipe.recipe_name}}" id="recipe_name" name="recipe_name" type="text" class="validate" required>
                         <label for="recipe_name">Recipe Name</label>
                     </div>
                 </div>
@@ -102,7 +102,7 @@
 <!--Photo Input field-->
                 <div class="row">
                     <div class="input-field col s12">
-                        <input id="photo" type="text" class="validate" name="photo" required>
+                        <input value="{{recipe.Photo}}" id="photo" type="text" class="validate" name="photo" required>
                         <label for="photo">Photo Url</label>
                     </div>
                 </div>

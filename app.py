@@ -69,8 +69,21 @@ def recipe(recipe_id):
     return render_template('recipe.html', recipe=recipe)
 
 
-@app.route('/update/<recipeId>')
+@app.route('/update/<recipeId>', methods=["GET", "POST"])
 def update(recipeId):
+    if request.method == "POST":
+        submission = {
+            "recipe_name": request.form.get("recipe_name"),
+            "category": request.form.get("category"),
+            "type": request.form.get("type"),
+            "instructions": request.form.getlist("instructions"),
+            "ingredients": request.form.getlist("ingredients"),
+            "Photo": request.form.get("photo")
+        }
+        mongo.db.recipes.update({"_id": ObjectId(recipeId)}, submission)
+        recipes = mongo.db.recipes.find()
+        return render_template('find.html', recipes=recipes)
+
     update = mongo.db.recipes.find_one({"_id": ObjectId(recipeId)})
     categories = mongo.db.category.find().sort("category_name", 1)
     types = mongo.db.type.find().sort("type_name", 1)
