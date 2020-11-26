@@ -412,7 +412,9 @@ The following are frameworks imported from the cheese shop (They can be found in
     - A new recipe was created
     - I went back to the update submission form and changed the action from `action="{{ url_for('share') }}"` to `action="{{ url_for('update') }}"`
     - I went back to MongoDB and removed Test2
-    - I am going to open up the test recipe again in find.html and I will attempt to update it's name to "test2" 
+    - I am going to open up the test recipe again in find.html and I will attempt to update it's name to "test2"
+    - I got a Jinja error, I changed `return redirect(find.html)` I coppied and pasted code from the view of `find()` into my function
+    - After updating a User is taken to the `find.html` page.
 
 In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
 
