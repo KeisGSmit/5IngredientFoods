@@ -65,7 +65,6 @@ def find():
 @app.route("/recipe/<recipe_id>")
 def recipe(recipe_id):
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
-    print(recipe)
     return render_template('recipe.html', recipe=recipe)
 
 
@@ -95,6 +94,13 @@ def update(recipeId):
                             types=types,
                             all_ingredients=all_ingredients,
                             all_instructions=all_instructions)
+
+
+@app.route("/delete/<recipe_id>", methods=["POST"])
+def delete(recipe_id):
+        mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
+        recipes = mongo.db.recipes.find()
+        return redirect(url_for("find"))
 
 
 if __name__ == "__main__":

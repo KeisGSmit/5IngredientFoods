@@ -2,6 +2,7 @@ $(document).ready(function(){
     $('.sidenav').sidenav();
     $('.slider').slider();
     $('select').formSelect();
+    $('.modal').modal();
 });
 // Function to dynamically add input fields for "Instructions" and "Ingredients"
 //https://www.sanwebe.com/2013/03/addremove-input-fields-dynamically-with-jquery
