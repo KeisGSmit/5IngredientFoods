@@ -80,8 +80,8 @@ def update(recipeId):
             "Photo": request.form.get("photo")
         }
         mongo.db.recipes.update({"_id": ObjectId(recipeId)}, submission)
-        recipes = mongo.db.recipes.find()
-        return render_template('find.html', recipes=recipes)
+        recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipeId)})
+        return render_template('recipe.html', recipe=recipe)
 
     update = mongo.db.recipes.find_one({"_id": ObjectId(recipeId)})
     categories = mongo.db.category.find().sort("category_name", 1)
@@ -96,11 +96,11 @@ def update(recipeId):
                             all_instructions=all_instructions)
 
 
-@app.route("/delete/<recipe_id>", methods=["POST"])
+@app.route("/delete/<recipe_id>")
 def delete(recipe_id):
-        mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
-        recipes = mongo.db.recipes.find()
-        return redirect(url_for("find"))
+    mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
+    # recipes = mongo.db.recipes.find()
+    return redirect(url_for("find"))
 
 
 if __name__ == "__main__":
