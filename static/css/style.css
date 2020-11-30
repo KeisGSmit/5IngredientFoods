@@ -62,41 +62,47 @@
     font-size: 32px;
     color: #fb001d;
 }
-.appliance-images{
+.appliance-images,
+.food-image{
     height: 150px;
     width: auto;
 }
 /* Large devices (desktops, Greater than 1200px) */
 @media (min-width: 1200px) { 
-    .appliance-images{
+    .appliance-images,
+    .food-image{
         height: 250px;
         width: 250px;
     }
  }
 /* Large devices (desktops, less than 1200px) */
 @media (max-width: 1200px) { 
-    .appliance-images{
+    .appliance-images,
+    .food-image{
         height: 150px;
         width: 150px;
     }
  }
 /* Medium devices (tablets, less than 992px) */
 @media (max-width: 992px) { 
-    .appliance-images{
+    .appliance-images,
+    .food-image{
         height: 150px;
         width: 150px;
     }
 }
 /* Small devices (landscape phones, less than 768px) */
 @media (max-width: 768px) {
-    .appliance-images{
+    .appliance-images,
+    .food-image{
         height: 150px;
         width: 150px;
     }
 }
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 576px) {
-    .appliance-images{
+    .appliance-images,
+    .food-image{
         height: 200px;
         width: 200px;
     }
