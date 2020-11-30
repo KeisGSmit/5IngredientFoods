@@ -19,8 +19,12 @@ app.secret_key = os.environ.get('SECRET_KEY')
 mongo = PyMongo(app)
 
 
-@app.route("/")
+@app.route("/", methods=["GET", "POST"])
 def home():
+    if request.method == "POST":
+        flash("Thank you for messaging us! We will be in touch shortly.")
+        return render_template("index.html")
+
     return render_template("index.html")
 
 
@@ -51,6 +55,7 @@ def share():
                 "Photo": request.form.get("photo")
             }
         mongo.db.recipes.insert_one(recipe)
+        flash("Thanks for sharing your recipe.")
         return redirect(url_for('home'))
 
     return render_template("share.html", categories=categories, types=types)
@@ -81,6 +86,7 @@ def update(recipeId):
         }
         mongo.db.recipes.update({"_id": ObjectId(recipeId)}, submission)
         recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipeId)})
+        flash("Recipe Updated.")
         return render_template('recipe.html', recipe=recipe)
 
     update = mongo.db.recipes.find_one({"_id": ObjectId(recipeId)})
@@ -99,7 +105,7 @@ def update(recipeId):
 @app.route("/delete/<recipe_id>")
 def delete(recipe_id):
     mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
-    # recipes = mongo.db.recipes.find()
+    flash("Recipe Successfully deleted.")
     return redirect(url_for("find"))
 
 
