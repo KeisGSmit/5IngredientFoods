@@ -35,9 +35,7 @@ def about():
 
 @app.route("/appliance")
 def appliance():
-    data = []
-    with open("data/appliances.json", "r") as json_data:
-        data = json.load(json_data)
+    data = mongo.db.appliances.find()
     return render_template("appliance.html", appliances=data)
 
 
