@@ -15,6 +15,21 @@
         </div>
     </div>
 </div>
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for message in messages %}
+            <div class="container-fluid">
+                <div class="section">
+                    <div class="row center-align">
+                        <div class="row flashes background-color-secondary-1-0">
+                            <h4 >{{ message }}</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    {% endif %}
+{% endwith %}
 <div class="container">
     <div class="section">
         <div class="row">
@@ -34,7 +49,7 @@
             <div class="col s12 m4 center-align">
             <img src="{{recipe.Photo}}" alt="Image of the recipe" class="responsive-img">
             </div>
-            <div class="col s12 m4 right-align">
+            <div class="col s12 m4 left-align">
                 <h5>Instructions</h5>
                 <ol>
                 {% for instructions in recipe.instructions %}
