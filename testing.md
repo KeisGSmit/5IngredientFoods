@@ -63,6 +63,22 @@
     - I got a Jinja error, I changed `return redirect(find.html)` I coppied and pasted code from the view of `find()` into my function
     - After updating a User is taken to the `find.html` page.
 
+8. Testing if good code was used: 
+    1. CSS 
+    - Firstly I copied my CSS into Auto-Prefixer (see credits)
+    - I saw nothing changed in the output, Thus I assumed no bad CSS was written
+    - Still coppied the out put and pasted it into my code so that I accredit the site. 
+    2. HTML 
+    - I ran my HTML through the w3 validator service
+    - The only error I got as "bad value" relating to my jinja, Thus good HTML has been written
+    3. JavaScript
+    - I coppied and pasted the code in my JavaScript file into JSHint (see credits)
+    - I recieved 9 warning where 8 refferred to my use of 'let' which is a key word, this is fine.
+    - I recieved a warning that a semicolon was missing in line 37, which I added back in
+    4. Python
+    - Unfortunatly I was unable to find a testing service for my python code.
+    - But assuming that all the desired outputs were achieved and no horrible bugs appeared, I can consider the code to be good. 
+
 In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well.
  Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, 
  with the project providing an easy and straightforward way for the users to achieve their goals.

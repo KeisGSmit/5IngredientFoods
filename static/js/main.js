@@ -34,7 +34,7 @@ $(document).ready(function() {
         page.preventDefault();
         if(ingredients_count < max_fields_ingredients){
             ingredients_count++;
-            $(ingredients_input_fields).append('<div><input name="ingredients" type="text" class="validate" required><a href="#" class="btn-small background-color-secondary-2-1 remove_field">Remove</a></div>')
+            $(ingredients_input_fields).append('<div><input name="ingredients" type="text" class="validate" required><a href="#" class="btn-small background-color-secondary-2-1 remove_field">Remove</a></div>');
         }
     });
 
