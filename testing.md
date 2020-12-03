@@ -80,17 +80,27 @@
     - But assuming that all the desired outputs were achieved and no horrible bugs appeared, I can consider the code to be good. 
 
 9. Testing login and registration functionality:
-    1. registration
+    1. Registration
         1. successful registration
-        - I went to the register form and entered `KeisG`as the username
-        - I entered a custom password: `helloworld`
-        - clicked on register button
-        - I was redirected to the home page and a flashed message appears - Thus successful
+            - I went to the register form and entered `KeisG`as the username
+            - I entered a custom password: `helloworld`
+            - clicked on register button
+            - I was redirected to the home page and a flashed message appears - Thus successful
         2. Unsuccessful registration
-        - following the same procedure as above, I entered the username `   ` (3 spaces) with the password`!@#$%^&*()`
-            - Form did not submit as expected - thus successful - got a error in the username field
-        - following the same procedure as above, I entered the username `HENRE`(acceptable username) with the password`!@#$%^&*()`
-            - Form did not submit as expected - thus successful - got a error in the password field
+            - following the same procedure as above, I entered the username `   ` (3 spaces) with the password`!@#$%^&*()`
+                - Form did not submit as expected - thus successful - got a error in the username field
+            - following the same procedure as above, I entered the username `HENRE`(acceptable username) with the password`!@#$%^&*()`
+                - Form did not submit as expected - thus successful - got a error in the password field
+    2. Login
+        1. Successful login
+            - Going to the login page I enter the registered user `KeisG`'s data as stated above
+            - After clicking login I am taken to the homepage with a flash message - Thus successful
+        2. Unsuccessful login
+            - Going to the login page I enter unregistered data: 
+                - username: `JohnnyNoxville`
+                - password: `backflip`
+            - Remaining on the login in page a flash message appears saying "Incorrect username and/or password"
+            - Thus Unsuccessful login functionality works. 
     
 In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well.
  Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, 
