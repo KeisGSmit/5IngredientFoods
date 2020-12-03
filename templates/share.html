@@ -5,7 +5,7 @@
         <div class="row">
             <div class="slider">
                 <ul class="slides">
-                    <li><img src="https://images.unsplash.com/photo-1515516089376-88db1e26e9c0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80">
+                    <li><img src="https://images.unsplash.com/photo-1515516089376-88db1e26e9c0">
                     <div class="caption right-align">
                         <h3>Share your recipes</h3>
                     </div>
@@ -32,25 +32,25 @@
 <!--Category Input fields-->
                 <div class="row">
                     <div class="input-field col s12">
-                        <select name="category" required>
+                        <select name="category" id="category" class="validate" required>
                             <option value="" disabled selected>Which meal time is most suitable? (Breakfast/Lunch/Dinner)</option>
                         {% for category in categories %}
                             <option value="{{ category.category_name }}">{{ category.category_name }}</option>
                         {% endfor %}
                         </select>
-                        <label>Category</label>
+                        <label for="category">Category</label>
                     </div>
                 </div>
 <!--Type Input fields-->
                 <div class="row">
                     <div class="input-field col s12">
-                        <select name="type" required>
+                        <select name="type" id="type" class="validate" required>
                             <option value="" disabled selected>Would you have this as a Main? or a Side? You chose</option>
                         {% for type in types %}
                             <option value="{{ type.type_name }}">{{ type.type_name }}</option>
                         {% endfor %}
                         </select>
-                        <label>Type</label>
+                        <label for="type">Type</label>
                     </div>
                 </div>
 <!--Instructions fields-->
@@ -76,7 +76,7 @@
 <!--Photo Input field-->
                 <div class="row">
                     <div class="input-field col s12">
-                        <input id="photo" type="text" class="validate" name="photo" required>
+                        <input id="photo" type="text" class="validate" pattern="https?:\/\/.+(jpg|jpeg|gif|bmp|png|tiff)" name="photo">
                         <label for="photo">Photo Url</label>
                     </div>
                 </div>

@@ -58,7 +58,7 @@
                 <div class="card background-color-secondary-1-2">
                     <div class="card-content white-text">
                         <span class="card-title">{{ recipe.recipe_name}}</span>
-                        <img class="responsive-image food-image" src="{{ recipe.Photo }}" alt="Recipe Image">
+                        <img class="responsive-image food-image" src="{{ recipe.photo }}" onError="this.onerror=null;this.src='{{ url_for('static', filename='img/default.jpg') }}';" alt="Recipe Image">
                     </div>
                     <div class="card-action">
                         <a href="{{url_for('recipe', recipe_id=recipe._id)}}" class="white-text">View Recipe</a>
