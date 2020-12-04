@@ -85,7 +85,7 @@ on each recipe because they have the lowest viability of all the features
     - I have 21 days to implement 8 features
     - This means one feature should be implemented every +-3 days  
 
-#### comments
+#### Comments
 
 - an issue with the comment section is:
     - All comments will just appear as paragraphs in cards and will not satisfy first time learning and lead to a bad UX. 
@@ -256,7 +256,7 @@ The user collection
 
 - Due to the simplicity of the structure of the site, the app/site should be very learnable
 
-### information Architecture
+### Information Architecture
 
 - This section is responsible for the creation of organisation and navigational schemes which has already been discussed in the structure plane concerns and 
 the interaction design. 
@@ -376,7 +376,7 @@ The following are frameworks imported from the cheese shop (They can be found in
 - [itsdangerous](https://pypi.org/project/itsdangerous/)
 - [Werkzeug](https://pypi.org/project/Werkzeug/)
 
-### libraries
+### Libraries
 
 - [JQuery](https://jquery.com)
 
@@ -457,6 +457,7 @@ Next, there's a series of steps to take in order to proceed with local deploymen
 - The [default.jpg](https://image.shutterstock.com/image-vector/meat-ball-vector-noodle-600w-706217521.jpg)
 - The [favicon](https://www.favicon.cc/)
 - The conversion table in recipe.html can be found [here](https://sugarandcharm.com/charming-printable-kitchen-conversion-chart)
+- The Media for individual recipes were submitted by users of the site
 
 ## Acknowledgements
 
