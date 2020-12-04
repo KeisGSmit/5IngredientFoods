@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
+<!--The slider for the top of the page-->
 <div class="container">
     <div class="section">
         <div class="row">
@@ -15,9 +16,11 @@
         </div>
     </div>
 </div>
+<!--The section where appliance cards will be stored-->
 <div class="container">
     <div class="section">
         <div class="row">
+        <!--Iterating over the appliance collection in MongoDB for each card-->
             {% for appliance in appliances %}
             <div class="col s12 m6">
                 <div class="card background-color-secondary-2-3">

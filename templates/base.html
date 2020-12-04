@@ -14,6 +14,7 @@
     <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}" type="image/x-icon">
 </head>
 <body>
+<!--Materialize Nav Bar for mobile and Desktop-->
 <nav class="background-color-primary-0">
     <div class="nav-wrapper">
         <a href="#!" class="brand-logo">5 Minute foods</a>
@@ -23,15 +24,18 @@
             <li><a href="{{ url_for('find')}}">Find</a></li>
             <li><a href="{{ url_for('appliance')}}">Appliances</a></li>
             <li><a href="{{ url_for('about')}}">About</a></li>
+            <!--if there is a signed in user, these links will be available-->
             {% if session.user %}
             <li><a href="{{ url_for('share')}}">Share</a></li>
             <li><a href="{{ url_for('logout')}}">Logout</a></li>
+            <!--If there is not a signed in user, the option to sign in will be available-->
             {% else %}
             <li><a href="{{ url_for('login')}}">Login/Register</a></li>
             {% endif %}
         </ul>
     </div>
 </nav>
+<!--The mobile nav bar is the same as the desktop nav bar above-->
 <ul class="sidenav" id="mobile-demo">
     <li><a href="{{ url_for('home')}}">Home</a></li>
     <li><a href="{{ url_for('find')}}">Find</a></li>
@@ -44,8 +48,10 @@
     <li><a href="{{ url_for('login')}}">Login/Register</a></li>
     {% endif %}    
 </ul>
+<!--This is where each individiual site's content will be injected into-->
 {% block content %}
 {% endblock %}
+<!--Custom footer with materialize-->
 <footer class="background-color-primary-1">
 <div class="container-fluid">
     <div class="section">

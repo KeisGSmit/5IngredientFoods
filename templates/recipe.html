@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
+<!--The slider for the top of the page-->
 <div class="container">
     <div class="section">
         <div class="row">
@@ -15,6 +16,7 @@
         </div>
     </div>
 </div>
+<!--flashed messages appear here-->
 {% with messages = get_flashed_messages() %}
     {% if messages %}
         {% for message in messages %}
@@ -30,29 +32,35 @@
         {% endfor %}
     {% endif %}
 {% endwith %}
+<!--The content for each individual recipe is injected here-->
 <div class="container">
     <div class="section">
         <div class="row">
+        <!--Recipe name goes here-->
             <div class="col s12 center-align">
                 <h4>{{ recipe.recipe_name }}</h4>
             </div>
         </div>
         <div class="row">
+        <!--Instructions come here-->
             <div class="col s12 m4 left-align">
                 <h5>Ingredients</h5>
                 <ul>
+                <!--Iterating over the array of instrictions in the database-->
                 {% for ingredients in recipe.ingredients %}
                 <li>{{ingredients}}</li>
                 {% endfor %}
                 </ul>
             </div>
             <div class="col s12 m4 center-align">
-                <!-- onError format inspired by CI tutor Tim -->
+                <!-- onError format inspired by CI tutor Tim Nelson-->
                 <img src="{{recipe.photo}}" onError="this.onerror=null;this.src='{{ url_for('static', filename='img/default.jpg') }}';" alt="Image of the recipe" class="responsive-img">
             </div>
             <div class="col s12 m4 left-align">
+            <!--Instructions come  here-->
                 <h5>Instructions</h5>
                 <ol>
+                <!--iterating over the array of instructions-->
                 {% for instructions in recipe.instructions %}
                 <li>{{instructions}}</li>
                 {% endfor %}
@@ -61,6 +69,7 @@
         </div>
     </div>
 </div>
+<!--The user requested conversion table-->
 <div class="container">
     <div class="section">
         <div class="row">
@@ -70,10 +79,12 @@
         </div>
     </div>
 </div>
+<!--The Update and Delete section to each recipe-->
 <div class="container">
     <div class="section">
         <div class="row">
             <div class="col s12 center-align">
+            <!--Only if the user created the recipe will they be able to update or delete the recipe-->
                 {% if recipe.author|lower == session.user|lower %}
                 <a class="waves-effect waves-light btn-large background-color-secondary-2-1" href="{{ url_for('update', recipe_id=recipe._id)}}"><i class="far fa-edit"></i>Update</a>
                 <!-- Modal Trigger -->
@@ -82,10 +93,12 @@
                 <!-- Modal Structure -->
                 <div id="modal1" class="modal">
                     <div class="modal-content">
+                    <!--custom warning message-->
                         <h4>WARNING!</h4>
                         <p>You are about to permanetly delete a recipe. This recipe will not be able to be recovered.</p>
                     </div>
                     <div class="modal-footer">
+                    <!--'Cancel' will close the modal and 'Delete' will delete the recipe-->
                         <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancel</a>
                         <a href="{{ url_for('delete', recipe_id=recipe._id)}}" type="submit" name="action" class="modal-close waves-effect waves-green btn-flat">Delete</a>
                     </div>

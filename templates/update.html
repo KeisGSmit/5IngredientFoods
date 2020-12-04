@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
+<!--The slider for the top of the page-->
 <div class="container">
     <div class="section">
         <div class="row">
@@ -21,6 +22,7 @@
             <h1>Update Recipe</h1>
         </div>
         <div class="row">
+<!--form which is populated with previously entered data to be edited-->
             <form class="col s12" method="POST" action="{{url_for('update', recipe_id=recipe._id)}}">
 <!--Recipe Name Input fields-->
                 <div class="row">
@@ -34,7 +36,9 @@
                     <div class="input-field col s12">
                         <select name="category" id="category" class="validate" required>
                             <option value="" disabled>Which meal time is most suitable? (Breakfast/Lunch/Dinner)</option>
+                            <!--iterating over the categories collection to give a user the option of choosing a category-->
                             {% for category in categories %}
+                                <!--making the auto selected option the previously entered choice-->
                                 {% if category.category_name == recipe.category %}
                             <option value="{{ category.category_name }}" selected>{{ category.category_name }}</option>
                                 {% else %}
@@ -50,7 +54,9 @@
                     <div class="input-field col s12">
                         <select name="type" id="name" class="validate" required>
                             <option value="" disabled>Would you have this as a Main? or a Side? You chose</option>
+                            <!--iterating over the type collection to give a user the option of choosing a type-->
                             {% for type in types %}
+                                <!--making the auto selected option the previously entered choice-->
                                 {% if type.type_name == recipe.type %}
                             <option value="{{ type.type_name }}" selected>{{ type.type_name }}</option>
                                 {% else %}
@@ -65,7 +71,9 @@
                 <div class="row">
     <!--Instructions input-->
                     <div class="input-field col s12 instructions_input_fields">
+                    <!--iterating over the array of previously entered instructions and injecting them into the input fields-->
                     {% for number in all_instructions %}
+                        <!--The first instruction will not have the remove button available-->
                         {% if number == 0 %}
                         <input value="{{recipe.instructions[number]}}" id="Instructions" type="text" class="validate" name="instructions" required>
                         <label for="Instructions">Instructions</label>
@@ -84,7 +92,9 @@
                 <div class="row">
     <!--Ingredients input-->
                     <div class="input-field col s12 ingredients_input_fields">
+                    <!--iterating over the array of previously entered ingredients and injecting them into the input fields-->
                     {% for number in all_ingredients %}
+                    <!--The first ingredient will not have the remove button available-->
                     {% if number == 0 %}
                         <input value="{{recipe.ingredients[number]}}" id="Ingredients" type="text" class="validate" name="ingredients" required>
                         <label for="Ingredients">Ingredients</label>

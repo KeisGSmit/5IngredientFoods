@@ -1,5 +1,8 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html' %} 
+{% block content %}
+<!--login title-->
 <h3 class="center-align">Login</h3>
+<!--flashed messages wwill appear here-->
 {% with messages = get_flashed_messages() %}
     {% if messages %}
         {% for message in messages %}
@@ -41,7 +44,7 @@
     </div>
   </form>
 </div>
-
+<!--link for user to be able to register-->
 <div class="row">
   <div class="col s12">
     <p class="center-align">New Here? <a href="{{url_for('register')}}" class="light-blue-text text-darken-4">Register Account</a>
