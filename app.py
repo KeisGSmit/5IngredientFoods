@@ -1,3 +1,5 @@
+# importing dependancies and initialising app
+
 import os
 import json
 from flask import (
@@ -18,6 +20,12 @@ app.secret_key = os.environ.get('SECRET_KEY')
 
 
 mongo = PyMongo(app)
+
+# Submitting the form will check if the user exists
+# If it does, then a flash message appear - try again
+# else a new data entry is inserted into the collection
+# A cookie will then be created for the user
+# user will be redirected to the home page
 
 
 @app.route("/register", methods=["GET", "POST"])
@@ -43,6 +51,12 @@ def register():
     return render_template("register.html")
 
 
+# The collection is searched for a matching username
+# Passwords are compared
+# successful login creates a redirect and a cookie
+# unsuccessful login flashes messages
+
+
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
@@ -64,11 +78,18 @@ def login():
     return render_template("login.html")
 
 
+# The session cookie is removed, flash message
+# user is redirected
+
+
 @app.route("/logout")
 def logout():
     flash("You have been logged out")
     session.pop("user")
     return render_template("index.html")
+
+
+# form submission renders a flash
 
 
 @app.route("/", methods=["GET", "POST"])
@@ -82,15 +103,28 @@ def home():
     return render_template("index.html")
 
 
+# renders a template
+
+
 @app.route("/about")
 def about():
     return render_template("about.html")
+
+
+# searches collection for data
+# data is parsed to the HTML page
 
 
 @app.route("/appliance")
 def appliance():
     data = mongo.db.appliances.find()
     return render_template("appliance.html", appliances=data)
+
+
+# only users in session can access - brute force prevented
+# data from categories and type collection are passed into HTML form
+# on submission a document is inserted into the recipes collection
+# user is redirected to that recipe's page
 
 
 @app.route("/share", methods=["GET", "POST"])
@@ -118,10 +152,16 @@ def share():
     return redirect(url_for("login"))
 
 
+# recipes collection is searched and parsed into the HTML
+
+
 @app.route("/find")
 def find():
     recipes = mongo.db.recipes.find()
     return render_template("find.html", recipes=recipes)
+
+
+# renders a template for that specific recipe by search for its ID
 
 
 @app.route("/recipe/<recipe_id>")
@@ -130,11 +170,16 @@ def recipe(recipe_id):
     return render_template('recipe.html', recipe=recipe)
 
 
+# recipe is searched for by its id
+# page prevents brute force entry
+# old data populates the form
+# on submission new data updates old data
+
+
 @app.route('/update/<recipe_id>', methods=["GET", "POST"])
 def update(recipe_id):
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     author = recipe["author"]
-    # if user in session, and session["user"] == recipe.author
     if "user" in session:
         if author.lower() == session["user"].lower():
             if request.method == "POST":
@@ -169,9 +214,13 @@ def update(recipe_id):
     return redirect(url_for("recipe", recipe_id=recipe_id))
 
 
+# Brute for entry is prevented 
+# only recipe author can delete recipe
+# deletes recipe by ID
+
+
 @app.route("/delete/<recipe_id>")
 def delete(recipe_id):
-    # if user in session, and session["user"] == recipe.author
     if "user" in session:
         recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
         author = recipe["author"]
@@ -182,6 +231,11 @@ def delete(recipe_id):
         flash("You do not have permission to delete this recipe.")
         return redirect(url_for("find"))
     return redirect(url_for("find"))
+
+
+# Collection recipes is index by name
+# recipe names searched for in search bar are searched for
+# data is parsed back into HTML
 
 
 @app.route('/search', methods=["GET", "POST"])
