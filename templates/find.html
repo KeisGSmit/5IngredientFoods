@@ -56,8 +56,8 @@
         {% for recipe in recipes %}
             <div class="col s12 m6">
                 <div class="card background-color-secondary-1-2">
-                    <div class="card-content white-text">
-                        <span class="card-title">{{ recipe.recipe_name}}</span>
+                    <div class="card-content">
+                        <span class="card-title white-text">{{ recipe.recipe_name}}</span>
                         <img class="responsive-image food-image" src="{{ recipe.photo }}" onError="this.onerror=null;this.src='{{ url_for('static', filename='img/default.jpg') }}';" alt="Recipe Image">
                     </div>
                     <div class="card-action">
