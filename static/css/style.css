@@ -74,6 +74,10 @@
     height: 150px;
     width: auto;
 }
+
+.landing-page-sliders{
+  text-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+}
 /* Large devices (desktops, Greater than 1200px) */
 @media (min-width: 1200px) { 
     .appliance-images,
@@ -81,7 +85,7 @@
         height: 250px;
         width: 250px;
     }
- }
+}
 /* Large devices (desktops, less than 1200px) */
 @media (max-width: 1200px) { 
     .appliance-images,
@@ -89,7 +93,7 @@
         height: 150px;
         width: 150px;
     }
- }
+}
 /* Medium devices (tablets, less than 992px) */
 @media (max-width: 992px) { 
     .appliance-images,
