@@ -85,7 +85,7 @@ on each recipe because they have the lowest viability of all the features
     - I have 21 days to implement 8 features
     - This means one feature should be implemented every +-3 days  
 
-##### comments
+#### comments
 
 - an issue with the comment section is:
     - All comments will just appear as paragraphs in cards and will not satisfy first time learning and lead to a bad UX. 
@@ -190,18 +190,23 @@ of the site and how a user might navigate through the site intuitively
 - Here are screenshots of how the collections look like. NOTE the type of each data field is stated in the screenshots
 
 ![The recipe collection](Readme_sourceFiles/mongodbsc1.png)
+
 The recipe collection
 
 ![The appliance collection](Readme_sourceFiles/mongodbsc2.png)
+
 The appliance collection
 
 ![The Category collection](Readme_sourceFiles/mongodbsc3.png)
+
 The Category collection
 
 ![The type collection](Readme_sourceFiles/mongodbsc4.png)
+
 The type collection
 
 ![The user collection](Readme_sourceFiles/mongodbsc5.png)
+
 The user collection
 
 - The Recipe collection will be the "main" database where each entry will have attributes:
