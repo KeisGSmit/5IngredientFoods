@@ -349,9 +349,11 @@ Due to this section being too long, I have written my tests in (testing.md)[test
 Link to the live page: https://keis5ingredientsfoods.herokuapp.com/ 
 
 To deploy this project online I followed the following steps:
-1. I created my env.py file where I created my variables (IP, Port, MONGo_URI, MONGO_DBNAME and a secret key for flashed massages)
+1. I created my `env.py` file where I created my variables (IP, PORT, MONGO_URI, MONGO_DBNAME and a secret key for flashed massages)
 2. I used the CLI to install all my frameworks and collected them inside the requirements.txt file (See requirements.txt)
-3. I created my procfile for heroku stating that it should run app.py as a web app and it uses the python language
+    - to install these requirements:
+    - `pip3 install -r requirements.txt`
+3. I created my Procfile for Heroku stating that it should run `app.py` as a web app and it uses the Python language
 4. I created my MongoDB, populated it with data and connected to it
 5. I went to https://dashboard.heroku.com/apps and created my new app
 6. I connected to my GitHub repository via Heroku
@@ -359,16 +361,16 @@ To deploy this project online I followed the following steps:
 ![Conviguration variables](Readme_sourceFiles/configVars.png)
 
 If you do not understand the code above: 
-- IP is 0.0.0.0
-- PORT is 5000
-- MONGo_URI is mongodb+srv://Root:`<my password>`@myfirstcluster.kbel5.mongodb.net/`<my database name>`?retryWrites=true&w=majority
-- MONGO_DBNAME is food
-- SECRET KEY is a password
+- IP is `0.0.0.0`
+- PORT is `5000`
+- MONGO_URI is `mongodb+srv://<username>:<password>@myfirstcluster.kbel5.mongodb.net/<database-name>?retryWrites=true&w=majority`
+- MONGO_DBNAME is `food`
+- SECRET_KEY is a `password`
 
 8. I connected to my master branch and this is where commits to the master branch will be deployed to the live project
 
 To deploy this project offline/locally I followed the following steps:
-1. 
+1. `git clone https://github.com/KeisGSmit/5IngredientFoods.git`
 
 # Credits
 
@@ -379,6 +381,7 @@ To deploy this project offline/locally I followed the following steps:
 - The colour scheme was created by me, Inspired by [this arcticle](https://www.quora.com/What-color-scheme-to-choose-for-food-website) but I used [Palleton](https://paletton.com/#uid=1000u0kllllaFw0g0qFqFg0w0aF)
 - The images for the site was obtained from [Unspalsh](https://unsplash.com/)
 - The conversion table in recipe.html can be found [here](https://sugarandcharm.com/charming-printable-kitchen-conversion-chart)
+
 ## Acknowledgements
 
 - I was able to dynamically add content fields and recieved inspiration from [Sanwebe](https://www.sanwebe.com/2013/03/addremove-input-fields-dynamically-with-jquery)
