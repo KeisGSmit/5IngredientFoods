@@ -10,22 +10,55 @@ was born. The name originates from my laziness; I would not spend more than 5 mi
 <!--table start-->
 
 - [UX](#UX)
+    - [User Stories](#User-Stories)
     - [Strategy Plane](#Strategy-plane)
     - [Scope Plane](#Scope-Plane)
     - [Structure Plane](#Structure-Plane)
     - [Skeleton Plane](#Skeleton-Plane)
     - [Surface Plane](#Surface-Plane)
 - [Features](#Features)
+    - [Existing Features](#Existing-Features)
+    - [Features Left to Implement](#Features-Left-to-Implement) 
 - [Technologies Used](#Technologies-Used)
+    - [Languages](#Languages)
+    - [Tools](#Tools)
+    - [Frameworks](#Frameworks)
+    - [Libraries](#Libraries)
 - [Testing](#Testing)
 - [Deployment](#Deployment)
+    - [Online Deployment](#Online-deployment)
+    - [Offline Deployment](#Offline/Local-Deployment)
 - [Credits](#Credits)
+    -[Content](#Content)
+    -[Media](#Media)
+    -[Acknowledgements](#Acknowledgements)
 <!--table end-->
 
 ![Mock-up](Readme_sourceFiles/mockup.png)
 ---
  
 # UX
+## User Stories
+
+- As a Non-registered User I want to:
+    - Find a recipe quickly
+        - Click on the "Find" button in the Nav bar and search through the catalog or search the recipe's name 
+    - Register to become a registered user
+        - To register a user clicks on the "login/register" button in the nav bar and click the registration button
+        - Users must then fill out a form and will then be registered
+    
+- As a registered User I want to:
+    - Share, update and delete my recipes 
+        - Firstly to share a recipe a user must click on the "share" button in the Nav bar and input the detail of the recipe in the form
+        - Only if a User created *that* recipe, will they be able to update and delete that recipe
+    - I want the ability to sign in and out
+        - To sign in a user clicks on the "login/register" button in the nav bar and fill out the form with their details
+        - Once a User wishes to sign out, they click the "logout" button in the nav bar
+
+- As the Administrator I want to:
+    - Promote cooking appliances to my users
+        - There will be a "appliances" button in the nav bar for all users to click on where appliances will be on display
+
 ## Strategy Plane
 ### High level considerations
 -	Looking at the target audience: This is a very culturally appropriate project. 
@@ -388,6 +421,8 @@ Due to this section being too long, I have written my tests in [testing.md](test
 
 Link to the live page: https://keis5ingredientsfoods.herokuapp.com/ 
 
+## Online deployment
+
 To deploy this project online (online IDE - like gitpod) follow the following steps:
 1. Clone this repository and initialize your own repository - open the repository
 2. Create your `env.py` file where you created your variables (IP, PORT, MONGO_URI, MONGO_DBNAME and a secret key for flashed massages)
@@ -414,6 +449,7 @@ If you do not understand the code above:
 9. Connect to a branch you want to deploy from and the project will be deployed to the heroku
 10. Click on the 'view' button to view the live deployed project
 
+## Offline/Local Deployment
 To deploy this project offline/locally I followed the following steps:
 
 Please note - in order to run this project locally on your own system, you will need the following installed:
