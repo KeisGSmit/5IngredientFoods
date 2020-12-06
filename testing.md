@@ -1,5 +1,7 @@
 # Testing
 
+## Tests
+
 1. Testing if Project deploys successfully to Heroku: (Sha: 937c8b93b29328c060febef617a9b8f7421e3a7d)
     - after the [Deployment](#deployment) sequence I pushed my work to GitHub
     - I got a jinja error
@@ -41,7 +43,7 @@
     - Form now submits correct data to the right collection 
 
 5. Rendering recipe.html 
-    - I added the corresponding app route and Jinja returned a TypeError saything that I can not iterate over the object
+    - I added the corresponding app route and Jinja returned a TypeError saying that I can not iterate over the object
     - I removed the Jinja for loop and my page rendered but the injected data does not show up
     - I changed the collection from recipe to recipes in the route 
     - data from the collection now renders to recipe.html successfully 
@@ -140,25 +142,20 @@
         - Promote cooking appliances 
             * Any user can click on "appliances" in the nav bar and cards are displayed with Individual cooking appliances displayed 
 
-    
-In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well.
- Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, 
- with the project providing an easy and straightforward way for the users to achieve their goals.
+## Variations
 
-Whenever it is feasible, prefer to automate your tests, and if you've done so, provide a brief explanation of your approach,
- link to the test file(s) and explain how to run them.
+- Variation in browsers and screen sizes
+    - I have not seen any massive changes in the project in different browsers
+        - browsers that have been tested include:
+            * Chrome - PC & Mobile
+            * Firfox - PC
+            * Safari - Mobile
+            * Mi Browser - Mobile
+    - Regarding Screen Sizes I have seen a change in the logo name in the Nav Bar
+        - On mobile the word "foods" is cut off - I attempted to change the layout in the dev tools in chrome; no successful middle ground can be found
+            - This is due to the library - materialize - that this is not possible
+    - On mobile the images render differently but they do not change the overall layout of the site
 
-For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant.
- A particularly useful form for describing your testing process is via scenarios, such as:
+# Bugs
 
-1. Contact form:
-    1. Go to the "Contact Us" page
-    2. Try to submit the empty form and verify that an error message about the required fields appears
-    3. Try to submit the form with an invalid email address and verify that a relevant error message appears
-    4. Try to submit the form with all inputs valid and verify that a success message appears.
-
-In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
-
-You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
-
-If this section grows too long, you may want to split it off into a separate file and link to it from here.
+- All bugs have been mentioned in the [tests](#Tests) section
