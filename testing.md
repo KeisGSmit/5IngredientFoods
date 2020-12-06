@@ -142,6 +142,17 @@
         - Promote cooking appliances 
             * Any user can click on "appliances" in the nav bar and cards are displayed with Individual cooking appliances displayed 
 
+11. Lighthouse chrome testing 
+
+![Lighthouse Scores](Readme_sourceFiles/lighthouse.png)
+
+By opening up lighthouse in the chrome developer tools I ran a report. This reminded me to add alt tags to images and download all my images and store
+them in my img directory. It also requested me to get rid of some of my dependancies but since they are dependancies, this is not possible. Lighthouse reccomended 
+changing the image file format, but I do not know how to do this. I will remember to do this in future projects. 
+
+Lighthouse reccomended changing the the contrast between labels and their corresponding backgrounds. These labels were taken directly off materialize
+and as such I expect them to be designed with UX in mind. Therefore the contrast will not be changed. 
+
 ## Variations
 
 - Variation in browsers and screen sizes
@@ -156,6 +167,7 @@
             - This is due to the library - materialize - that this is not possible
     - On mobile the images render differently but they do not change the overall layout of the site
 
-# Bugs
+## Bugs
 
 - All bugs have been mentioned in the [tests](#Tests) section
+
