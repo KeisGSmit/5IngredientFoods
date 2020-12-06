@@ -60,8 +60,8 @@
     - I went back to the update submission form and changed the action from `action="{{ url_for('share') }}"` to `action="{{ url_for('update') }}"`
     - I went back to MongoDB and removed Test2
     - I am going to open up the test recipe again in find.html and I will attempt to update it's name to "test2"
-    - I got a Jinja error, I changed `return redirect(find.html)` I coppied and pasted code from the view of `find()` into my function
-    - After updating a User is taken to the `find.html` page.
+    - I got a Jinja error, I changed `return redirect(find.html)`, I coppied and pasted code from the view of `find()` into my function
+    - After updating a User is taken to the `find.html` page successfully.
 
 8. Testing if good code was used: 
     1. CSS 
@@ -101,6 +101,45 @@
                 - password: `backflip`
             - Remaining on the login in page a flash message appears saying "Incorrect username and/or password"
             - Thus Unsuccessful login functionality works. 
+
+10. Testing User stories
+    1. Non-registered users
+        - Finding a recipe
+            * Click on the "Find" button in the Nav bar
+            * A search bar is present to search recipes by name 
+            * Cards are available to click on for Individual recipes 
+        - Becoming a registered user
+            * Click on the "login/register" button in the nav bar
+            * Login form appears with a registration link below it - click on that link - takes me to the registration form
+            * Form can be filled in to register - Works successfully
+
+    2. Registred User
+        - Share
+            * Click on the "share" button in the Nav bar - a form appears and a recipe for Hot Chocolate is entered and submitted
+            * User is redirected to that recipe's Individual page with a flash message - Sharing works
+        - Update
+            * Click on a random recipe not created by **THIS** user - no update button displayed
+            * Click on a random recipe created by **THIS** user - update button displayed 
+            * Click on update button displayed takes user to a form with that recipe's data loaded 
+            * Changing the data and clicking submit changes that recipe - Update successful
+        - Delete
+            * Click on a random recipe not created by **THIS** user - no delete button displayed
+            * Click on a random recipe created by **THIS** user - Delete button displayed 
+            * Click on delete button triggerd a warning modal with 2 buttons - cancel and delete
+            * Clicking on cancel closes the modal
+            * Clicking on delete deletes the recipe and closes modal - Delete Successful
+        - Sign in 
+            * Click on the login/register button in the Nav bar
+            * Enter the credentials of a non registered user and loggin in results in a flash warning appering
+            * Enter the credentials of a registered user and click on login - user successfullylogged in 
+        - Log out
+            * Only when logged in is this available
+            * Click on Logout in the Nav Bar and the session cookie is cleared and a user is logged out - successful
+
+    3. Administrator
+        - Promote cooking appliances 
+            * Any user can click on "appliances" in the nav bar and cards are displayed with Individual cooking appliances displayed 
+
     
 In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well.
  Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, 
