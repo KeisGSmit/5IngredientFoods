@@ -1,9 +1,7 @@
 # 5 Minute Foods
 
-5 Minute Foods was intiallly a Pokédex for "Pokémon Go" but was remastered to be a site, where people can share recipes.
-5 Minute Foods was inspired by the heaps of hand written recipes in my parents' kitchen. My mom would always try and find 
-recipes from relatives, some recipes did not exist on paper. So to make finding and sharing recipes easier, 5 Minute Foods 
-was born. The name originates from my laziness; I would not spend more than 5 minutes looking and sharing recipes. 
+5 Minute Foods was initially a Pokédex for "Pokémon Go" but was re-mastered to be a site, where people can share recipes.
+5 Minute Foods was inspired by the heaps of hand written recipes in my parents' kitchen. My mom would always try and find recipes from relatives; some recipes did not exist on paper. So to make finding and sharing recipes easier, 5 Minute Foods was born. The name originates from my laziness; I would not spend more than 5 minutes looking and sharing recipes. 
 
 ## Table of contents
 
@@ -42,9 +40,9 @@ was born. The name originates from my laziness; I would not spend more than 5 mi
 
 - As a Non-registered User I want to:
     - Find a recipe quickly
-        - Click on the "Find" button in the Nav bar and search through the catalog or search the recipe's name 
+        - Click on the "Find" button in the Nav bar and search through the catalogue or search the recipe's name 
     - Register to become a registered user
-        - To register a user clicks on the "login/register" button in the nav bar and click the registration button
+        - To register a user clicks on the "login/register" button in the Nav bar and click the registration button
         - Users must then fill out a form and will then be registered
     
 - As a registered User I want to:
@@ -57,14 +55,14 @@ was born. The name originates from my laziness; I would not spend more than 5 mi
 
 - As the Administrator I want to:
     - Promote cooking appliances to my users
-        - There will be a "appliances" button in the nav bar for all users to click on where appliances will be on display
+        - There will be an "appliances" button in the nav bar for all users to click on where appliances will be on display
 
 ## Strategy Plane
 ### High level considerations
 -	Looking at the target audience: This is a very culturally appropriate project. 
 It is a web app that focuses on sharing recipes. 
 -	Anybody can use this web app. The content will focus on recipes and food. 
--	We can track and catalogue the content in an intuitive way by using forms and databases  with collections in MongDB
+-	We can track and catalogue the content in an intuitive way by using forms and databases with collections in MongDB
 -	The content will be entered into a database and be displayed to the different pages
 -	Cook books require people to buy the books while this web app provides the recipes for free
 -	The technology we are using is very modern: HTML5, CSS3, JavaScript, Python3 and MongoDB
@@ -80,10 +78,8 @@ Due to the assessment, business goals are negligible.
 -	The value we provide is to be able to quickly find recipes and share them. 
 -	Anyone is allowed to use the website
 -	People looking for recipes are people who do not know what to make for breakfast/dinner/lunch so we aim to provide as many recipes for these as possible. 
--	Competitors normally share their recipes in a blog which makes it tedious because as a user, we do not care about the blogger’s life story regarding that recipe,
- we just want the recipe. 
--	Competitors who share their recipes on non-blog sites normally share gifs of their recipe on forums (Reddit) but without knowing that you can control the gif
- makes it long to find the next step because you will have to wait for the gif to replay before you can see the next step. 
+-	Competitors normally share their recipes in a blog which makes it tedious because as a user, we do not care about the blogger’s life story regarding that recipe, we just want the recipe. 
+-	Competitors who share their recipes on non-blog sites normally share gifs of their recipe on forums (Reddit) but without knowing that you can control the gif makes it long to find the next step because you will have to wait for the gif to replay before you can see the next step. 
 -	User needs: 
     - Easily find and share recipes 
 -	Site owner’s goal:
@@ -100,72 +96,67 @@ Due to the assessment, business goals are negligible.
 
 - First I add up the total on importance, which is 33
 
-- Then I find my average viability, which is 4.25. Then I multiply that by the 
-number of items, which is 34. 
+- Then I find my average viability, which is 4.25. Then I multiply that by the number of items, which is 34. 
 
 - My importance "value" is 33 and my viability is 34. Thus viability > importance
-    - this means that all features can be implemented
+    - This means that all features can be implemented
 
 - Depending on the time constraints the items with the lowest importance will be incorporated last
 ## Scope Plane
 
 ### Trade off
 
-- The features that are open for discussion at the moment (16/11/2020) (DD/MM/YYYY) is the Promotion of Products and the comment section 
-on each recipe because they have the lowest viability of all the features
+- The features that are open for discussion at the moment (16/11/2020) (DD/MM/YYYY) is the Promotion of Products and the comment section on each recipe because they have the lowest viability of all the features
 
-- the project should be done within 3 weeks 
+- The project should be done within 3 weeks 
     - I have 21 days to implement 8 features
     - This means one feature should be implemented every +-3 days  
 
 #### Comments
 
-- an issue with the comment section is:
+- An issue with the comment section is:
     - All comments will just appear as paragraphs in cards and will not satisfy first time learning and lead to a bad UX. 
-    - Further research will have to be done to be able to incorporate a voting system to rate the most helpful comments and
-      to permanently show each comment to the correct url. 
-        - this leads to another issue: how do I prevent a user voting more than once?
+    - Further research will have to be done to be able to incorporate a voting system to rate the most helpful comments and to permanently show each comment to the correct url. 
+        - This leads to another issue: how do I prevent a user voting more than once?
 
 - Thus, I believe the comment section should not be included. 
 
 #### Promotion of products
 
-- A collection can be established with images, names and links 
-of certain cooking equipment used in the different recipes and these can be
- used to promote products. (Linking user to the Official product site)
+- A collection can be established with images, names and links of certain cooking equipment used in the different recipes and these can be used to promote products. (Linking user to the Official product site)
 
 ### Requirements
 - I conducted an interview with my family regarding this section asking them 3 main questions
-    - what do the users say they need?
+    - What do the users say they need?
         -  One User wanted a conversion Table
-            - this can be incorporated under each recipe's individual page 
+            - This can be incorporated under each recipe's individual page 
         - One user wants media - photos/gifs of the recipe
-            - this can also be incorporated in each recipe's individual page
+            - This can also be incorporated in each recipe's individual page
             - If broken links are submitted a default image will appear instead
         - Users said they wanted a difficulty level for each recipe
             - I found this to be relative to each person and can lead to intimidation - Thus bad User experience
         - One user said they wanted cooking tips at the side but this is so niche to each recipe
             - This was not included
         - Another user wanted the recipes to already be on the app
-            - Some recipes will exist but they wont be as abundant
+            - Some recipes will exist but they won’t be as abundant
         - Users want to know if the recipe was tested by different users
             - This will rely on a comment section, which will not be included
         - Users wanted categories for each recipe
-            - main course, sides, desserts etc...
+            - Main course, sides, desserts etc...
             - There has to be a limit of categories
         - Users wanted cooking "teachings" to teach people using the app how to cooking
             - But this misses the site's goal and can be considered negligible 
         - Users wanted a filtering system to be able to filter their searches by difficulty
-            - this can be done by creating an index in mongoDB 
+            - This can be done by creating an index in MongoDB 
             - Instead a search feature was added to be able to search for recipes by name
-        - users wanted to share the recipes via pictures but this going to lead to recipes being misread and/or misunderstood
+        - Users wanted to share the recipes via pictures but this going to lead to recipes being misread and/or misunderstood
 
-    - what they actually need? 
+    - What they actually need? 
         - Users were unaware of the requirements:
-            - to have a responsive design 
-            - to have a navigation system
+            - To have a responsive design 
+            - To have a navigation system
         
-    - what they do not know they need?
+    - What they do not know they need?
         - The submission form here is crucial since this is the only logical way to get the recipe online in a clear and comprehensive manner.
         - Users were unaware of the importance of the wireframes and the surface plane.
         - A session cookie will prevent random users from updating and deleting recipes they did not create
@@ -175,18 +166,17 @@ of certain cooking equipment used in the different recipes and these can be
 - Looking at the content requirements there will be a lot of mixed content of the multiple pages
     - Images/ gifs, Cards, Ordered and Unordered lists with a lot of text
 
-- considering the viability of the scope plane requirements I would say that the requirements 
-we can include (outside of the initial features) are:
+- considering the viability of the scope plane requirements I would say that the requirements we can include (outside of the initial features) are:
     - The conversion Table
-    - media/ gifs of the recipe
-    - The categories for when the meal is applicable (dinner/lunch/breakfast etc.). these will be stored in a database and they will be part of a drop down list in the submission form
+    - Media/ gifs of the recipe
+    - The categories for when the meal is applicable (dinner/lunch/breakfast etc.). These will be stored in a database and they will be part of a drop down list in the submission form
     - The filtering system/search functionality 
-- the requirements can't include due to viability is:
+- The requirements can't include due to viability is:
     - The difficulty level
         - I support this idea but difficulty is relevant: Gordon Ramsey might find roast beef simple but a 15 year old could find it challenging/dangerous
     - The cooking tips
         - I can attempt to include this but if it makes the database full then it will probably not be included
-    - The comment section as disscussed
+    - The comment section as discussed
 
 
 - The requirements listed are not features but they are "nice to haves"
@@ -194,27 +184,24 @@ we can include (outside of the initial features) are:
 
 - A non-functional requirement I am seeing is scalability 
     - I will have to move to a better, larger server if the traffic gets too big
-        - this means setting up new environment variables which can be done but will definitely cost money
+        - This means setting up new environment variables which can be done but will definitely cost money
 
 ## Structure Plane
 ### Concerns
 
-- The following diagram displays how I plan to organize the functionality & content 
-of the site and how a user might navigate through the site intuitively 
+- The following diagram displays how I plan to organize the functionality & content of the site and how a user might navigate through the site intuitively 
 
 ![Structure plane](Readme_sourceFiles/Structure_plane.png)
 
 - The user will start at the landing page 
-- At the top will be a nav bar with 5 sections: Share, Find, About, appliances and Home
+- At the top will be a nav bar with 5 sections: Share, Find, About, Appliances and Home
     - "Share" will be a submission form - only available to registered users
-    - "Find" will be a gallery/catalogue with a filter that uses advanced routing
-     to direct a user to an individual recipe, where the user who created the recipe can edit or delete a recipe
+    - "Find" will be a gallery/catalogue with a filter that uses advanced routing to direct a user to an individual recipe, where the user who created the recipe can edit or delete a recipe
     - "About" will give a bit more information on the project's background
     - "Appliances" will be a gallery of appliances from a collection that links a user to the official site of that appliance
     - "Home" will take a user to the landing page
 
-- The plan is to have a linear hyperlinked structure that is simple enough
- for users to navigate through but complex enough to include a lot of information
+- The plan is to have a linear hyperlinked structure that is simple enough for users to navigate through but complex enough to include a lot of information
 
 
 ### Interaction design 
@@ -248,9 +235,8 @@ The user collection
     - Name: will be the name of the recipe, the search functionality will target this attribute
     - instructions and ingredient: these two fields will be in the form of an array of strings. By using Java Script 
     I plan to create more input fields in the form. For each input field (for the two attributes), that will get pushed into the corresponding array to MongoDB. 
-        - To get this to appear on the recipe's page, I will filter through each item in the array displaying the ingredients in an `<li></li>` child of 
-    an `<ul></ul>` and the instructions in an `<li></li>` that is a child of an `<ol></ol>`
-    - Img: this will be a url of a gif or a image of the meal 
+        - To get this to appear on the recipe's page, I will filter through each item in the array displaying the ingredients in an `<li></li>` child of an `<ul></ul>` and the instructions in an `<li></li>` that is a child of an `<ol></ol>`
+    - Img: this will be a URL of a gif or an image of the meal 
     - Finally each database will have a Primary key auto generated by MongoDB called "_id"
 
 - All input fields will be required except for the photo.
@@ -258,25 +244,25 @@ The user collection
 
 - Looking at the interactive systems discussed so far:
     - The ability to update and delete recipes
-        - only the user who created the recipe is able to update and delte that recipe
+        - Only the user who created the recipe is able to update and delete that recipe
         - The update button will redirect a user to a form that is filled with that recipe's data
-        - The delete button will trigger a modal for defensive programming and on the modal, the delete button will delete the recipe
+        - The delete button will trigger a modal for defensive programming and on the modal; the delete button will delete the recipe
     - The gallery/catalogue of recipe cards to click on
-        - each recipe will be in a card which when clicked on will take you to that recipe's page
-        - there will be a search bar above all the cards that allows the users to search for recipe names
+        - Each recipe will be in a card which when clicked on will take you to that recipe's page
+        - There will be a search bar above all the cards that allows the users to search for recipe names
     - The form on the landing page
-        - A user is able to fill out that form and message the admin, but due to the API not being installed, only a flashed message will appear
-        - All form elements require data or else the form will nto submit
+        - A user is able to fill out that form and message the admin, but due to the API not being installed; only a flashed message will appear
+        - All form elements require data or else the form will not submit
     - The update form
         - As discussed above the recipe's site will have a update button
         - clicking on it will redirect the user to a populated form
-        - data can be changed there and be resubmitted to change the original recipe
+        - Data can be changed there and be resubmitted to change the original recipe
     - The submission form to submit recipes
-        - there are input fields to enter data 
-        - if more ingredients/instructions need to be added there will be a button that "reveals"/"adds" more input fields
-        - on submission the form's data will get pushed to the database where the recipe will be on display in the "Find" section
+        - There are input fields to enter data 
+        - If more ingredients/instructions need to be added there will be a button that "reveals"/"adds" more input fields
+        - On submission the form's data will get pushed to the database where the recipe will be on display in the "Find" section
     - The appliance page to promote appliances for the page owner
-        - This will be a simple gallery that will send a user to the site selling that appliances
+        - This will be a simple gallery that will send a user to the site selling those appliances
     - There will be a log in and registration form for a user to register and log into
         - So that users can share recipes and delete/update their own
 
@@ -291,10 +277,9 @@ The user collection
 
 ### Information Architecture
 
-- This section is responsible for the creation of organisation and navigational schemes which has already been discussed in the structure plane concerns and 
-the interaction design. 
+- This section is responsible for the creation of organisation and navigational schemes which has already been discussed in the structure plane concerns and the interaction design. 
 
-- the architecture, I believe, is done correctly so that when changes are made the architecture can accommodate those changes
+- The architecture, I believe, is done correctly so that when changes are made the architecture can accommodate those changes
 
 - The architecture forms a Tree Structure which is relatively standard
     - This is known to be problematic on Mobile but with the ease of a burger icon, I plan to reduce those problems
@@ -302,9 +287,8 @@ the interaction design.
 ### Principals of organisation
 
 - The way data will be organised as follows:
-    - The organising principles used at the highest levels of the site should be most
-    closely tied to user needs & business objectives
-        - that means a link to share/find a recipe should be in the navigation bar
+    - The organising principles used at the highest levels of the site should be most closely tied to user needs & business objectives
+        - That means a link to share/find a recipe should be in the navigation bar
         - The link to promote cooking appliances should also be in the Nav
     - Organising rules at lower levels are influenced by future specs & content requirements
         - Like the comment section 
@@ -312,7 +296,7 @@ the interaction design.
 
 ## Skeleton Plane
 
-Here Are the wireframes of the site for different modern devices 
+Here are the wireframes of the site for different modern devices 
 - [Desktop view](Readme_sourceFiles/DesktopWireframe.pdf)
 
 - [Mobile & Tablet view](Readme_sourceFiles/MobileAndTabletView.pdf)
@@ -327,16 +311,15 @@ To add Visual language to the site, here are the design choices I made.
 - I want flash messages and recipe cards to be a shade of yellow
 - Submission buttons, Update & delete buttons must be red
 - Main sections of the site must be buildable
-    - like the nav bar
+    - Like the nav bar
 
-- The font family will remain consistant and will be the standard materialize font.
+- The font family will remain consistent and will be the standard materialize font.
 
 - Regarding images:
-    - images in the cards of the "appliances" and "find" section must be contained and square
-    - A default image must be provided if there is a error rendering that image
+    - Images in the cards of the "appliances" and "find" section must be contained and square
+    - A default image must be provided if there is an error rendering that image
 
-- Each section of the site will have a cover photo while the landing page has a carousel but the images in the carousel need to be the same
-as the images in the cover photo
+- Each section of the site will have a cover photo while the landing page has a carousel but the images in the carousel need to be the same as the images in the cover photo
 
 # Features
  
@@ -361,7 +344,7 @@ as the images in the cover photo
     - Clicking on Cancel closes the modal 
     - Clicking on delete deletes that recipe. 
 - Appliances Promotion
-    - In the "appliances" section there are cards with different applainces
+    - In the "appliances" section there are cards with different appliances
     - Clicking on the individual links takes a user to the official site where that appliance will be sold.
 
 
@@ -427,17 +410,17 @@ To deploy this project online (online IDE - like gitpod) follow the following st
 1. Clone this repository and initialize your own repository - open the repository
 2. Create your `env.py` file where you created your variables (IP, PORT, MONGO_URI, MONGO_DBNAME and a secret key for flashed massages)
 3. Used the CLI to install all of the frameworks and collect them inside the requirements.txt file (See requirements.txt)
-    - to install these requirements, in your CLI type:
+    - To install these requirements, in your CLI type:
     - `pip3 install -r requirements.txt`
 4. Create a Procfile for Heroku stating that it should run `app.py` as a web app and it uses the Python language
-    - this should be its contents:
+    - This should be its contents:
     - `web: python app.py`
     - ensure the file is only on one line
 5. Create your MongoDB database and collections (see interaction design above for how to set up the collections), populated it with data and connected to it by following the steps in MongoDB
 6. Sign up to Heroku and go to https://dashboard.heroku.com/apps and created your new app
 7. Connect to your GitHub repository via Heroku
 8. Go to settings and add your configuration variables (same variables as in my env.py file - see image below)
-![Conviguration variables](Readme_sourceFiles/configVars.png)
+![Configuration variables](Readme_sourceFiles/configVars.png)
 
 If you do not understand the code above: 
 - IP is `0.0.0.0`
@@ -446,7 +429,7 @@ If you do not understand the code above:
 - MONGO_DBNAME is `food`
 - SECRET_KEY is a `password`
 
-9. Connect to a branch you want to deploy from and the project will be deployed to the heroku
+9. Connect to a branch you want to deploy from and the project will be deployed to the Heroku
 10. Click on the 'view' button to view the live deployed project
 
 ## Offline/Local Deployment
@@ -497,9 +480,9 @@ Next, there's a series of steps to take in order to proceed with local deploymen
 
 ## Acknowledgements
 
-- I was able to dynamically add content fields and recieved inspiration from [Sanwebe](https://www.sanwebe.com/2013/03/addremove-input-fields-dynamically-with-jquery)
-- To be able to add the instructions and ingredients as an array to my collection in MongoDB, [Miklos](https://github.com/Sarosim) helpped me
+- I was able to dynamically add content fields and received inspiration from [Sanwebe](https://www.sanwebe.com/2013/03/addremove-input-fields-dynamically-with-jquery)
+- To be able to add the instructions and ingredients as an array to my collection in MongoDB, [Miklos](https://github.com/Sarosim) helped me
 - [Igor](https://github.com/bravoalpha79) assisted me in being able to get data to show up in recipe.html 
 - My family were the users who were interviewed 
-- [How to dynamically add html elements](//https://www.sanwebe.com/2013/03/addremove-input-fields-dynamically-with-jquery) for my Jquery in my JavaScript file
-- [Tim Nelson](https://github.com/TravelTimN) helpped me with user authentication via the login and registration system.  
+- [How to dynamically add html elements](//https://www.sanwebe.com/2013/03/addremove-input-fields-dynamically-with-jquery) for my JQuery in my JavaScript file
+- [Tim Nelson](https://github.com/TravelTimN) helped me with user authentication via the login and registration system.  
