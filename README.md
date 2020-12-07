@@ -473,6 +473,7 @@ Next, there's a series of steps to take in order to proceed with local deploymen
     - [cover2](https://images.unsplash.com/photo-1447279506476-3faec8071eee?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80)
     - [cover3](https://images.unsplash.com/photo-1515516089376-88db1e26e9c0)
     - [cover4](https://images.unsplash.com/photo-1466637574441-749b8f19452f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80)
+    - [confused man](https://images.unsplash.com/photo-1518644730709-0835105d9daa?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=60)
 - The [default.jpg](https://image.shutterstock.com/image-vector/meat-ball-vector-noodle-600w-706217521.jpg)
 - The [favicon](https://www.favicon.cc/)
 - The conversion table in recipe.html can be found [here](https://sugarandcharm.com/charming-printable-kitchen-conversion-chart)
